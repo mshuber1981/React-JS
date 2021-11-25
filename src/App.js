@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;

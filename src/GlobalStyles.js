@@ -145,7 +145,7 @@ p {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,6 +155,7 @@ main {
 /* Accessibility */
   input[type="checkbox"]:focus + span, button:focus {
     outline: 0.15rem solid #183EFA;
+    border-radius: 50%;
   }
 `;
 

@@ -12,7 +12,7 @@ const StyledNavBar = styled.nav`
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       font-size: 2rem;
-      margin: 0 0.25rem;
+      margin: 0 0.5rem;
 
       .nav-btn {
         line-height: 0;

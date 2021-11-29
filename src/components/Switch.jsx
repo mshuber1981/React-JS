@@ -20,6 +20,7 @@ const StyledSwitch = styled.label`
   input[type="checkbox"] {
     height: 0;
     width: 0;
+    opacity: 0;
   }
 
   /* Move span when checked */

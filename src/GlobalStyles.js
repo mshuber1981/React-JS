@@ -143,6 +143,19 @@ p {
     width: 95vw;
   }
 }
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Accessibility */
+  input[type="checkbox"]:focus + span, button:focus {
+    outline: 0.15rem solid #183EFA;
+  }
 `;
 
 export default GlobalStyles;

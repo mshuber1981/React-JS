@@ -7,7 +7,7 @@ export default function Counter() {
       <main>
         <h1>404</h1>
         <br />
-        <OuterButton as={Link} to="/React-JS/">
+        <OuterButton as={Link} to="/">
           Home
         </OuterButton>
       </main>

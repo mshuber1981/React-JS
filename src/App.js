@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import Home from "./pages/Home";
@@ -43,23 +43,23 @@ export default function App() {
     });
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyles />
         <Routes>
           <Route
             exact
-            path="/React-JS/"
+            path="/"
             element={<Home theme={themes[theme]} toggleTheme={toggleTheme} />}
           />
           <Route
             exact
-            path="/React-JS/Birthday-Reminder"
+            path="/Birthday-Reminder"
             element={<BirthdayReminder />}
           />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

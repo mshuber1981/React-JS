@@ -48,10 +48,15 @@ export default function App() {
         <GlobalStyles />
         <Routes>
           <Route
-            path="/"
+            exact
+            path="/React-JS/"
             element={<Home theme={themes[theme]} toggleTheme={toggleTheme} />}
           />
-          <Route path="/Birthday-Reminder" element={<BirthdayReminder />} />
+          <Route
+            exact
+            path="/React-JS/Birthday-Reminder"
+            element={<BirthdayReminder />}
+          />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

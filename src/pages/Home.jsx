@@ -10,11 +10,9 @@ export default function Home(props) {
       <main>
         <h1>Home</h1>
         <br />
-        {/* <Link to="/Birthday-Reminder"> */}
-        <OuterButton as={Link} to="/Birthday-Reminder">
+        <OuterButton as={Link} to="/React-JS/Birthday-Reminder">
           Birthday Reminder
         </OuterButton>
-        {/* </Link> */}
         <br />
         <ToggleSwitch {...props} />
       </main>

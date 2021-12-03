@@ -90,7 +90,7 @@ export default function BirthdayReminder() {
           })}
           <InnerButton onClick={() => setPeople([])}>clear all</InnerButton>
         </section>
-        <Link to="/">
+        <Link to="/React-JS/">
           <OuterButton>Home</OuterButton>
         </Link>
       </StyledBirthdayReminder>

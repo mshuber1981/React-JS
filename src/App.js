@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import GlobalStyles from "./GlobalStyles";
-import NavBar from "./components/NavBar";
-import Switch from "./components/Switch";
+import GlobalStyles from "./components/GlobalStyles";
+import Home from "./pages/Home";
+import BirthdayReminder from "./pages/BirthdayReminder";
+import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -34,16 +36,25 @@ export default function App() {
     }
   }, []);
 
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", function (e) {
+      e.matches ? setTheme("dark") : setTheme("light");
+    });
+
   return (
-    <>
+    <BrowserRouter>
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyles />
-        <NavBar />
-        <main>
-          <h1>React</h1>
-          <Switch theme={theme} toggleTheme={toggleTheme} />
-        </main>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home theme={themes[theme]} toggleTheme={toggleTheme} />}
+          />
+          <Route path="/Birthday-Reminder" element={<BirthdayReminder />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
       </ThemeProvider>
-    </>
+    </BrowserRouter>
   );
 }

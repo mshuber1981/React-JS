@@ -38,6 +38,7 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
+  --clr-access: #183EFA;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -153,9 +154,13 @@ main {
 }
 
 /* Accessibility */
-  input[type="checkbox"]:focus + span, button:focus {
-    outline: 0.15rem solid #183EFA;
+  input[type="checkbox"]:focus + div {
+    outline: 0.15rem solid var(--clr-access);
     border-radius: 50%;
+  }
+
+  button:focus, a:focus {
+    outline: 0.15rem solid var(--clr-access);
   }
 `;
 

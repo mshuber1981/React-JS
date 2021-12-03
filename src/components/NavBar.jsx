@@ -13,12 +13,13 @@ const StyledNavBar = styled.nav`
       align-items: center;
       font-size: 2rem;
       margin: 0 0.5rem;
+      color: var(--clr-primary-5);
 
       .nav-btn {
         line-height: 0;
         background: transparent;
         border-color: transparent;
-        color: ${(props) => props.theme.color};
+        color: var(--clr-primary-5);
         cursor: pointer;
         justify-self: end;
         font-size: 2rem;

@@ -5,6 +5,7 @@ import { FaReact, FaBars } from "react-icons/fa";
 const StyledNavBar = styled.nav`
   position: fixed;
   width: 100%;
+  z-index: 2;
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
 

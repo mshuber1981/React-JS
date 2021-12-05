@@ -6,13 +6,19 @@ import NavBar from "../components/NavBar";
 import { OuterButton, InnerButton } from "../components/buttons";
 
 const StyledBirthdayReminder = styled.main`
+  text-align: center;
+
   .container {
+    text-align: left;
     width: 90vw;
-    margin: 5rem 0;
+    margin: 5rem auto;
     max-width: var(--fixed-width);
     border-radius: var(--radius);
     padding: 1.5rem 2rem;
-    box-shadow: var(--dark-shadow);
+    box-shadow: ${(props) =>
+      props.theme.name === "light"
+        ? "var(--light-shadow)"
+        : "var(--lw-shadow)"};
     background: ${(props) =>
       props.theme.name === "light"
         ? "var(--clr-grey-1)"
@@ -73,26 +79,30 @@ export default function BirthdayReminder() {
     <>
       <NavBar />
       <StyledBirthdayReminder>
-        <section className="container">
-          <h3>{peoples.length} birthdays today</h3>
-          {peoples.map((person) => {
-            const { id, name, age, image } = person;
-            return (
-              <article key={id} className="person">
-                <img src={image} alt={name} />
-                <div>
-                  <h4>{name}</h4>
-                  <p>{age} years</p>
-                </div>
-                <InnerButton onClick={() => removeItem(id)}>Remove</InnerButton>
-              </article>
-            );
-          })}
-          <InnerButton onClick={() => setPeople([])}>clear all</InnerButton>
+        <section className="section section-center">
+          <div className="container">
+            <h3>{peoples.length} birthdays today</h3>
+            {peoples.map((person) => {
+              const { id, name, age, image } = person;
+              return (
+                <article key={id} className="person">
+                  <img src={image} alt={name} />
+                  <div>
+                    <h4>{name}</h4>
+                    <p>{age} years</p>
+                  </div>
+                  <InnerButton onClick={() => removeItem(id)}>
+                    Remove
+                  </InnerButton>
+                </article>
+              );
+            })}
+            <InnerButton onClick={() => setPeople([])}>clear all</InnerButton>
+          </div>
+          <OuterButton type="link" as={Link} to="/">
+            Home
+          </OuterButton>
         </section>
-        <Link to="/">
-          <OuterButton>Home</OuterButton>
-        </Link>
       </StyledBirthdayReminder>
     </>
   );

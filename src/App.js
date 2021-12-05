@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import Home from "./pages/Home";
 import BirthdayReminder from "./pages/BirthdayReminder";
+import ToursPage from "./pages/ToursPage";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -52,11 +53,8 @@ export default function App() {
             path="/"
             element={<Home theme={themes[theme]} toggleTheme={toggleTheme} />}
           />
-          <Route
-            exact
-            path="/Birthday-Reminder"
-            element={<BirthdayReminder />}
-          />
+          <Route path="/Birthday-Reminder" element={<BirthdayReminder />} />
+          <Route path="/Tours" element={<ToursPage />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

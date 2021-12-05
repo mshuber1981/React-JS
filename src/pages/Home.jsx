@@ -1,28 +1,36 @@
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { projects } from "../data";
+import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
-import { Title, OuterButton } from "../components/styledComponents";
 import ToggleSwitch from "../components/ToggleSwitch";
+import Project from "../components/Home/Project";
+
+const StyledHome = styled.main`
+  .projects-page-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 3rem 2rem;
+  }
+`;
 
 export default function Home(props) {
   return (
     <>
       <NavBar />
-      <main>
+      <StyledHome>
         <Title>
-          <h1>Home</h1>
+          <h1>React Projects</h1>
           <div className="underline"></div>
         </Title>
-        <br />
-        <OuterButton type="link" as={Link} to="/Birthday-Reminder">
-          Birthday Reminder
-        </OuterButton>
-        <br />
-        <OuterButton type="link" as={Link} to="/Tours">
-          Tours
-        </OuterButton>
-        <br />
         <ToggleSwitch {...props} />
-      </main>
+        <section className="section">
+          <div className="section-center projects-page-center">
+            {projects.map(function (project) {
+              return <Project key={project.id} {...project} />;
+            })}
+          </div>
+        </section>
+      </StyledHome>
     </>
   );
 }

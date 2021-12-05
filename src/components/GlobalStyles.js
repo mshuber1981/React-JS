@@ -134,6 +134,11 @@ p {
   }
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 .section {
   padding: 5rem 0;
 }

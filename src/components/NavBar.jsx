@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { FaReact, FaBars } from "react-icons/fa";
 
 const StyledNavBar = styled.nav`
+  position: fixed;
+  width: 100%;
+  background: ${(props) =>
+    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+
   .nav-center {
     max-width: var(--max-width);
     margin: 0 auto;

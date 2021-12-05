@@ -42,8 +42,10 @@ Variables
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  --dark-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+  --lw-shadow: 5px 5px 12px rgba(255, 255, 255, 0.7);
+  --dw-shadow: 6px 6px 12px rgba(255, 255, 255, 0.9);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -83,7 +85,6 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -134,13 +135,17 @@ p {
 }
 
 .section {
+  padding: 5rem 0;
+}
+
+.section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
 }
 
 @media screen and (min-width: 992px) {
-  .section {
+  .section-center {
     width: 95vw;
   }
 }

@@ -1,3 +1,31 @@
+// Media
+import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
+import Tours from "./media/cards/Tours.PNG";
+
+// Projects
+export const projects = [
+  {
+    id: 1,
+    name: "Birthday Reminder",
+    image: BirthdayReminder,
+    link: "/Birthday-Reminder",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/BirthdayReminder.jsx",
+  },
+  {
+    id: 2,
+    name: "Tours",
+    image: Tours,
+    link: "/Tours",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
+  },
+];
+
 // Birthday Reminder
 export const people = [
   {

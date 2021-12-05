@@ -42,7 +42,7 @@ export default function ToggleSwitch(props) {
     <StyledSwitch>
       <input
         type="checkbox"
-        aria-label={`Toggle theme, currently ${props.theme}.`}
+        aria-label={`Toggle theme, currently ${props.theme.name}.`}
         onClick={props.toggleTheme}
       />
       <div>{props.theme.name === "light" ? <GiSunflower /> : <GiMoon />}</div>

@@ -2,8 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { people } from "../data";
 import styled from "styled-components";
+import {
+  Title,
+  OuterButton,
+  InnerButton,
+} from "../components/styledComponents";
 import NavBar from "../components/NavBar";
-import { OuterButton, InnerButton } from "../components/buttons";
 
 const StyledBirthdayReminder = styled.main`
   text-align: center;
@@ -80,6 +84,10 @@ export default function BirthdayReminder() {
       <NavBar />
       <StyledBirthdayReminder>
         <section className="section section-center">
+          <Title>
+            <h2>Birthday Reminders</h2>
+            <div className="underline"></div>
+          </Title>
           <div className="container">
             <h3>{peoples.length} birthdays today</h3>
             {peoples.map((person) => {

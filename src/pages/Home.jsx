@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { OuterButton } from "../components/buttons";
+import { Title, OuterButton } from "../components/styledComponents";
 import ToggleSwitch from "../components/ToggleSwitch";
 
 export default function Home(props) {
@@ -8,10 +8,17 @@ export default function Home(props) {
     <>
       <NavBar />
       <main>
-        <h1>Home</h1>
+        <Title>
+          <h1>Home</h1>
+          <div className="underline"></div>
+        </Title>
         <br />
-        <OuterButton as={Link} to="/Birthday-Reminder">
+        <OuterButton type="link" as={Link} to="/Birthday-Reminder">
           Birthday Reminder
+        </OuterButton>
+        <br />
+        <OuterButton type="link" as={Link} to="/Tours">
+          Tours
         </OuterButton>
         <br />
         <ToggleSwitch {...props} />

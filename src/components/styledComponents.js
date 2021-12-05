@@ -7,6 +7,19 @@ const spin = keyframes`
     }
 `;
 
+// Animations
+export const bounce = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 // Titles
 export const Title = styled.div`
   display: inline-block;

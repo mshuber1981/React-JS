@@ -15,7 +15,7 @@ const StyledBirthdayReminder = styled.main`
   .container {
     text-align: left;
     width: 90vw;
-    margin: 5rem auto;
+    margin: 2rem auto;
     max-width: var(--fixed-width);
     border-radius: var(--radius);
     padding: 1.5rem 2rem;

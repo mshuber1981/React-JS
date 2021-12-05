@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { bounce } from "./styledComponents";
 import { FaReact, FaBars } from "react-icons/fa";
 
 const StyledNavBar = styled.nav`
@@ -28,6 +29,10 @@ const StyledNavBar = styled.nav`
         cursor: pointer;
         justify-self: end;
         font-size: 2rem;
+
+        svg {
+          animation: ${bounce} 2s ease-in-out infinite;
+        }
       }
     }
   }

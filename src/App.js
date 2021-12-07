@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 // https://v5.reactrouter.com/web/guides/scroll-restoration
 import ScrollToTop from "./components/ScrollToTop";
@@ -25,25 +26,19 @@ const themes = {
 };
 
 export default function App() {
-  const [theme, setTheme] = useState("light");
-
-  function toggleTheme() {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  }
+  const { theme, setDark, setLight } = useGlobalContext();
+  const setDarkTheme = useRef(setDark);
+  const setLightTheme = useRef(setLight);
 
   useEffect(function () {
-    if (darkMode) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    darkMode ? setDarkTheme.current() : setLightTheme.current();
   }, []);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", function (e) {
-      e.matches ? setTheme("dark") : setTheme("light");
-    });
+    .addEventListener("change", (e) =>
+      e.matches ? setDarkTheme.current() : setLightTheme.current()
+    );
 
   return (
     <HashRouter>
@@ -51,11 +46,7 @@ export default function App() {
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyles />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Home theme={themes[theme]} toggleTheme={toggleTheme} />}
-          />
+          <Route exact path="/" element={<Home />} />
           <Route path="/Birthday-Reminder" element={<BirthdayReminder />} />
           <Route path="/Tours" element={<ToursPage />} />
           <Route path="*" element={<Error />} />

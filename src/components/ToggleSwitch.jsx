@@ -1,3 +1,4 @@
+import { useGlobalContext } from "../context";
 import styled from "styled-components";
 import { GiSunflower, GiMoon } from "react-icons/gi";
 
@@ -13,9 +14,9 @@ const StyledSwitch = styled.label`
   transition: var(--transition);
   border: 2px solid var(--clr-primary-5);
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
-  color: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
+  color: ${(props) =>
+    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
 
   /* Hide defualt checkbox */
   input[type="checkbox"] {
@@ -37,15 +38,17 @@ const StyledSwitch = styled.label`
   }
 `;
 
-export default function ToggleSwitch(props) {
+export default function ToggleSwitch() {
+  const { theme, toggleTheme } = useGlobalContext();
+
   return (
     <StyledSwitch>
       <input
         type="checkbox"
-        aria-label={`Toggle theme, currently ${props.theme.name}.`}
-        onClick={props.toggleTheme}
+        aria-label={`Toggle theme, currently ${theme}.`}
+        onClick={toggleTheme}
       />
-      <div>{props.theme.name === "light" ? <GiSunflower /> : <GiMoon />}</div>
+      <div>{theme === "light" ? <GiSunflower /> : <GiMoon />}</div>
     </StyledSwitch>
   );
 }

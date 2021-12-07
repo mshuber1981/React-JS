@@ -27,6 +27,7 @@ const themes = {
 
 export default function App() {
   const { theme, setDark, setLight } = useGlobalContext();
+  // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
   const setDarkTheme = useRef(setDark);
   const setLightTheme = useRef(setLight);
 

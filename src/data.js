@@ -1,4 +1,5 @@
-// Media
+// Media/icons
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
 import Tours from "./media/cards/Tours.PNG";
 
@@ -23,6 +24,20 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
+  },
+];
+
+// Social Media
+export const socials = [
+  {
+    id: 1,
+    url: "https://www.linkedin.com/in/mikeyhuber/",
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 2,
+    url: "https://github.com/mshuber1981",
+    icon: <FaGithub />,
   },
 ];
 

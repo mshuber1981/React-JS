@@ -172,6 +172,31 @@ main {
   button:focus, a:focus {
     outline: 0.15rem solid var(--clr-access);
   }
+
+  /* SideBar */
+  .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* row-gap: 1rem; */
+  transition: var(--transition);
+  transform: translate(-100%);
+  z-index: 3;
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+  }
+}
 `;
 
 export default GlobalStyles;

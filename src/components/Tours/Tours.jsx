@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Title, OuterButton } from "../styledComponents";
+import { Title } from "../styledComponents";
 import Tour from "./Tour";
 
 const StyledTours = styled.main`
@@ -20,9 +19,6 @@ export default function Tours({ tours, removeTour }) {
         {tours.map((tour) => {
           return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
-        <OuterButton type="link" as={Link} to="/">
-          Home
-        </OuterButton>
       </section>
     </StyledTours>
   );

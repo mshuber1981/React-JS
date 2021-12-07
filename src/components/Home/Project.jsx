@@ -1,3 +1,4 @@
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { bounce } from "../styledComponents";
@@ -75,11 +76,18 @@ const StyledProject = styled.article`
 `;
 
 export default function Project({ name, image, link, description, github }) {
+  const { closeSidebar } = useGlobalContext();
+
   return (
     <StyledProject>
       <div className="project-container">
         <img src={image} alt={name} />
-        <Link to={link} className="project-icon" title="Live Demo">
+        <Link
+          to={link}
+          className="project-icon"
+          title="Live Demo"
+          onClick={closeSidebar}
+        >
           <RiComputerLine />
         </Link>
       </div>

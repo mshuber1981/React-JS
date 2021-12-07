@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Loading } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
 import Tours from "../components/Tours/Tours";
 
 const url = "https://course-api.com/react-tours-project";
@@ -42,6 +43,7 @@ export default function App() {
     return (
       <>
         <NavBar />
+        <SideBar />
         <main>
           <Loading />
         </main>
@@ -53,6 +55,7 @@ export default function App() {
     return (
       <>
         <NavBar />
+        <SideBar />
         <main>
           <h2>{error}</h2>
         </main>
@@ -63,6 +66,7 @@ export default function App() {
   return (
     <>
       <NavBar />
+      <SideBar />
       <Tours tours={tours} removeTour={removeTour} />
     </>
   );

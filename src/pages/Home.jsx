@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { projects } from "../data";
 import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
-import ToggleSwitch from "../components/ToggleSwitch";
+import SideBar from "../components/SideBar";
 import Project from "../components/Home/Project";
 
 const StyledHome = styled.main`
@@ -17,18 +17,17 @@ const StyledHome = styled.main`
   }
 `;
 
-export default function Home(props) {
+export default function Home() {
   return (
     <>
       <NavBar />
+      <SideBar />
       <StyledHome>
         <section className="section">
           <Title>
             <h1>React Projects</h1>
             <div className="underline"></div>
           </Title>
-          <br />
-          <ToggleSwitch {...props} />
           <div className="section-center projects-page-center">
             {projects.map(function (project) {
               return <Project key={project.id} {...project} />;

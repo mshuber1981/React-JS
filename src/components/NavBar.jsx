@@ -1,3 +1,4 @@
+import { useGlobalContext } from "../context";
 import styled from "styled-components";
 import { bounce } from "./styledComponents";
 import { FaReact, FaBars } from "react-icons/fa";
@@ -40,12 +41,14 @@ const StyledNavBar = styled.nav`
 `;
 
 export default function NavBar() {
+  const { openSidebar } = useGlobalContext();
+
   return (
     <StyledNavBar>
       <div className="nav-center">
         <div className="nav-header">
           <FaReact />
-          <button type="button" className="nav-btn">
+          <button type="button" className="nav-btn" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>

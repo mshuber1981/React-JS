@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
+// https://v5.reactrouter.com/web/guides/scroll-restoration
+import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import Home from "./pages/Home";
@@ -45,6 +47,7 @@ export default function App() {
 
   return (
     <HashRouter>
+      <ScrollToTop />
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyles />
         <Routes>

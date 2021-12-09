@@ -4,8 +4,8 @@ import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Tours from "../components/Tours/Tours";
 
-const url = "https://course-api.com/react-tours-project";
-// const url = "https://mshuber1981.github.io/React-JS/tours.json";
+// const url = "https://course-api.com/react-tours-project";
+const url = "https://mshuber1981.github.io/React-JS/tours.json";
 
 export default function App() {
   const [loading, setLoading] = useState(true);

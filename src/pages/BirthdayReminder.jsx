@@ -68,9 +68,7 @@ export default function BirthdayReminder() {
   const [peoples, setPeople] = useState(people);
 
   function removeItem(id) {
-    let newPeoples = peoples.filter(function (person) {
-      return person.id !== id;
-    });
+    let newPeoples = peoples.filter((person) => person.id !== id);
 
     setPeople(newPeoples);
   }
@@ -87,7 +85,7 @@ export default function BirthdayReminder() {
           </Title>
           <div className="container">
             <h3>{peoples.length} birthdays today</h3>
-            {peoples.map((person) => {
+            {peoples.map(function (person) {
               const { id, name, age, image } = person;
               return (
                 <article key={id} className="person">

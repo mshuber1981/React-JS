@@ -29,9 +29,9 @@ export default function Home() {
             <div className="underline"></div>
           </Title>
           <div className="section-center projects-page-center">
-            {projects.map(function (project) {
-              return <Project key={project.id} {...project} />;
-            })}
+            {projects.map((project) => (
+              <Project key={project.id} {...project} />
+            ))}
           </div>
         </section>
       </StyledHome>

@@ -182,7 +182,6 @@ main {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* row-gap: 1rem; */
   transition: var(--transition);
   transform: translate(-100%);
   z-index: 3;

@@ -8,6 +8,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import Home from "./pages/Home";
 import BirthdayReminder from "./pages/BirthdayReminder";
 import ToursPage from "./pages/ToursPage";
+import Reviews from "./pages/Reviews";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -50,6 +51,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/Birthday-Reminder" element={<BirthdayReminder />} />
           <Route path="/Tours" element={<ToursPage />} />
+          <Route path="/Reviews" element={<Reviews />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

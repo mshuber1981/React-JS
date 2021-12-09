@@ -8,19 +8,14 @@ const StyledReview = styled.article`
   margin-top: 1rem;
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
-  transition: var(--transition);
   border: 0.15rem solid var(--clr-primary-5);
+  transition: var(--transition);
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
   color: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
-
-  &:hover {
-    box-shadow: ${(props) =>
-      props.theme.name === "light" ? "var(--dark-shadow)" : "var(--dw-shadow)"};
-  }
 
   .img-container {
     position: relative;

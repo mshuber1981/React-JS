@@ -13,7 +13,7 @@ const StyledBirthdayReminder = styled.main`
     width: 90vw;
     margin: 2rem auto;
     max-width: var(--fixed-width);
-    outline: 0.15rem solid var(--clr-primary-5);
+    border: 0.15rem solid var(--clr-primary-5);
     border-radius: var(--radius);
     padding: 1.5rem 2rem;
     box-shadow: ${(props) =>

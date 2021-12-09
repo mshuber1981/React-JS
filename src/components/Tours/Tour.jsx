@@ -2,14 +2,14 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const StyledTour = styled.article`
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  border: 0.15rem solid var(--clr-primary-5);
+  transition: var(--transition);
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
-  outline: 0.15rem solid var(--clr-primary-5);
-  border-radius: var(--radius);
-  margin: 2rem 0;
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
-  transition: var(--transition);
 
   &:hover {
     box-shadow: ${(props) =>

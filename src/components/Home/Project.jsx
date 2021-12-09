@@ -7,14 +7,20 @@ import { FaGithub } from "react-icons/fa";
 
 const StyledProject = styled.article`
   border-radius: var(--radius);
-  outline: 0.15rem solid var(--clr-primary-5);
+  border: 0.15rem solid var(--clr-primary-5);
   max-width: 90vw;
+  transition: var(--transition);
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
   color: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
+
+  &:hover {
+    box-shadow: ${(props) =>
+      props.theme.name === "light" ? "var(--dark-shadow)" : "var(--dw-shadow)"};
+  }
 
   .project-container {
     position: relative;

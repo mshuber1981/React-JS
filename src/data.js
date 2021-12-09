@@ -2,6 +2,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
 import Tours from "./media/cards/Tours.PNG";
+import Reviews from "./media/cards/Reviews.PNG";
 
 // Projects
 export const projects = [
@@ -28,7 +29,7 @@ export const projects = [
   {
     id: 3,
     name: "Reviews",
-    image: Tours,
+    image: Reviews,
     link: "/Reviews",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

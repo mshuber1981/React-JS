@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.3150aa39.chunk.css",
-    "main.js": "/React-JS/static/js/main.7150fc99.chunk.js",
-    "main.js.map": "/React-JS/static/js/main.7150fc99.chunk.js.map",
+    "main.js": "/React-JS/static/js/main.fb48258b.chunk.js",
+    "main.js.map": "/React-JS/static/js/main.fb48258b.chunk.js.map",
     "runtime-main.js": "/React-JS/static/js/runtime-main.1ea59fea.js",
     "runtime-main.js.map": "/React-JS/static/js/runtime-main.1ea59fea.js.map",
-    "static/js/2.c4ff1a4b.chunk.js": "/React-JS/static/js/2.c4ff1a4b.chunk.js",
-    "static/js/2.c4ff1a4b.chunk.js.map": "/React-JS/static/js/2.c4ff1a4b.chunk.js.map",
+    "static/js/2.cd1b6301.chunk.js": "/React-JS/static/js/2.cd1b6301.chunk.js",
+    "static/js/2.cd1b6301.chunk.js.map": "/React-JS/static/js/2.cd1b6301.chunk.js.map",
     "index.html": "/React-JS/index.html",
     "static/css/main.3150aa39.chunk.css.map": "/React-JS/static/css/main.3150aa39.chunk.css.map",
-    "static/js/2.c4ff1a4b.chunk.js.LICENSE.txt": "/React-JS/static/js/2.c4ff1a4b.chunk.js.LICENSE.txt",
+    "static/js/2.cd1b6301.chunk.js.LICENSE.txt": "/React-JS/static/js/2.cd1b6301.chunk.js.LICENSE.txt",
     "static/media/BirthdayReminder.60329126.PNG": "/React-JS/static/media/BirthdayReminder.60329126.PNG",
     "static/media/Tours.76210127.PNG": "/React-JS/static/media/Tours.76210127.PNG"
   },
   "entrypoints": [
     "static/js/runtime-main.1ea59fea.js",
-    "static/js/2.c4ff1a4b.chunk.js",
+    "static/js/2.cd1b6301.chunk.js",
     "static/css/main.3150aa39.chunk.css",
-    "static/js/main.7150fc99.chunk.js"
+    "static/js/main.fb48258b.chunk.js"
   ]
 }

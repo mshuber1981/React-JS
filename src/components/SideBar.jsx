@@ -1,5 +1,6 @@
+import { useEffect, useRef } from "react";
 import { useGlobalContext } from "../context";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { projects, socials } from "../data";
 import { FaReact, FaTimes } from "react-icons/fa";
@@ -38,6 +39,10 @@ const StyledSideBar = styled.aside`
     overflow-y: auto;
     background: ${(props) =>
       props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-3)"};
+
+    .active {
+      color: var(--clr-primary-5);
+    }
 
     a {
       display: flex;
@@ -94,6 +99,23 @@ const StyledSideBar = styled.aside`
 
 export default function SideBar() {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const { pathname } = useLocation();
+  const ul = useRef(null);
+
+  useEffect(
+    function () {
+      for (const li of ul.current.children) {
+        const link = li.children[0];
+
+        if (link.hash === `#${pathname}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      }
+    },
+    [pathname]
+  );
 
   return (
     <StyledSideBar
@@ -105,7 +127,7 @@ export default function SideBar() {
           <FaTimes />
         </button>
       </div>
-      <ul className="links">
+      <ul className="links" ref={ul}>
         <li>
           <Link to={"/"} onClick={closeSidebar}>
             Home
@@ -123,7 +145,7 @@ export default function SideBar() {
       </ul>
       <div className="container">
         <ul className="social-icons">
-          {socials.map((social) => {
+          {socials.map(function (social) {
             return (
               <li key={social.id}>
                 <a href={social.url}>{social.icon}</a>

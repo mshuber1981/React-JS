@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 const StyledProject = styled.article`
   border-radius: var(--radius);
+  outline: 0.15rem solid var(--clr-primary-5);
   max-width: 90vw;
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
@@ -19,10 +20,10 @@ const StyledProject = styled.article`
     position: relative;
 
     img {
-      border-top-left-radius: var(--radius);
-      border-top-right-radius: var(--radius);
       height: 16rem;
       object-fit: cover;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
     }
 
     .project-icon {

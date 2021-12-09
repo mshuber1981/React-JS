@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledTour = styled.article`
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+  outline: 0.15rem solid var(--clr-primary-5);
   border-radius: var(--radius);
   margin: 2rem 0;
   box-shadow: ${(props) =>

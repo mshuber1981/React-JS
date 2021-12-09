@@ -9,7 +9,7 @@ const StyledReview = styled.article`
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
   transition: var(--transition);
-  outline: 0.15rem solid var(--clr-primary-5);
+  border: 0.15rem solid var(--clr-primary-5);
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
   color: ${(props) =>

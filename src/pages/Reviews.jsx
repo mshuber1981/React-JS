@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import Review from "../components/Reviews/Review";
 
 const StyledReviews = styled.main`
   text-align: center;
@@ -23,6 +24,7 @@ export default function Reviews() {
             <h2>Reviews</h2>
             <div className="underline"></div>
           </Title>
+          <Review />
         </section>
       </StyledReviews>
     </>

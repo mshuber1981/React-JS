@@ -12,7 +12,11 @@ const StyledSwitch = styled.label`
   border-radius: 30px;
   margin: 0.25rem;
   transition: var(--transition);
-  border: 2px solid var(--clr-primary-5);
+  border: 2px solid
+    ${(props) =>
+      props.theme.name === "light"
+        ? "var(--clr-grey-1)"
+        : "var(--clr-primary-5)"};
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
   color: ${(props) =>

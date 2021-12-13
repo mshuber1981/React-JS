@@ -8,9 +8,14 @@ import ToggleSwitch from "../components/ToggleSwitch";
 
 const StyledSideBar = styled.aside`
   font-size: 2rem;
-  color: var(--clr-primary-5);
+  color: ${(props) =>
+    props.theme.name === "light"
+      ? "var(--clr-grey-10)"
+      : "var(--clr-primary-5)"};
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+    props.theme.name === "light"
+      ? "var(--clr-primary-5)"
+      : "var(--clr-grey-1)"};
 
   .sidebar-header {
     display: flex;
@@ -38,7 +43,7 @@ const StyledSideBar = styled.aside`
   .links {
     overflow-y: auto;
     background: ${(props) =>
-      props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-3)"};
+      props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-3)"};
 
     .active {
       color: var(--clr-primary-5);
@@ -84,13 +89,16 @@ const StyledSideBar = styled.aside`
         font-size: 1.75rem;
         margin: 0 0.5rem;
         transition: var(--transition);
-        color: var(--clr-primary-5);
+        color: ${(props) =>
+          props.theme.name === "light"
+            ? "var(--clr-grey-10)"
+            : "var(--clr-primary-5)"};
 
         &:hover {
           color: ${(props) =>
             props.theme.name === "light"
-              ? "var(--clr-grey-10)"
-              : "var(--clr-grey-1)"};
+              ? "var(--clr-grey-1)"
+              : "var(--clr-grey-10)"};
         }
       }
     }

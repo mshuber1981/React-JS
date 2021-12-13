@@ -7,12 +7,10 @@ const StyledQuestion = styled.article`
   border: 2px solid
     ${(props) =>
       props.theme.name === "light"
-        ? "var(--clr-grey-10)"
-        : "var(--clr-grey-1)"};
+        ? "var(--clr-grey-1)"
+        : "var(--clr-grey-10)"};
   margin-bottom: 1rem;
   border-radius: var(--radius);
-  box-shadow: ${(props) =>
-    props.theme.name === "light" ? "var(--lw-shadow)" : "var(--light-shadow)"};
 
   header {
     display: flex;
@@ -23,12 +21,6 @@ const StyledQuestion = styled.article`
       text-transform: none;
       line-height: 1.5;
       margin-bottom: 0;
-    }
-
-    p {
-      color: var(--clr-grey-3);
-      margin-bottom: 0;
-      margin-top: 0.5rem;
     }
 
     .btn {
@@ -46,6 +38,13 @@ const StyledQuestion = styled.article`
       align-self: center;
       min-width: 2rem;
     }
+  }
+
+  p {
+    color: ${(props) =>
+      props.theme.name === "light" ? "var(--clr-grey-2)" : "var(--clr-grey-9)"};
+    margin-bottom: 0;
+    margin-top: 0.5rem;
   }
 `;
 

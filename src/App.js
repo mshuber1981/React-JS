@@ -23,7 +23,7 @@ const themes = {
   dark: {
     name: "dark",
     color: "hsl(210, 36%, 96%)",
-    background: "hsl(209, 61%, 16%)",
+    background: "#131722",
   },
 };
 

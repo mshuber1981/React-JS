@@ -7,7 +7,7 @@ const StyledTour = styled.article`
   border: 0.15rem solid var(--clr-primary-5);
   transition: var(--transition);
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+    props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
@@ -60,16 +60,16 @@ const StyledTour = styled.article`
         margin-bottom: 0;
         color: ${(props) =>
           props.theme.name === "light"
-            ? "var(--clr-grey-10)"
-            : "var(--clr-grey-1)"};
+            ? "var(--clr-grey-1)"
+            : "var(--clr-grey-10)"};
       }
 
       .tour-price {
         color: var(--clr-primary-5);
         background: ${(props) =>
           props.theme.name === "light"
-            ? "var(--clr-grey-10)"
-            : "var(--clr-grey-1)"};
+            ? "var(--clr-grey-1)"
+            : "var(--clr-grey-9)"};
         padding: 0.25rem 0.5rem;
         border-radius: var(--radius);
       }

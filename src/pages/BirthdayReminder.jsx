@@ -22,12 +22,12 @@ const StyledBirthdayReminder = styled.main`
         : "var(--lw-shadow)"};
     background: ${(props) =>
       props.theme.name === "light"
-        ? "var(--clr-grey-1)"
-        : "var(--clr-grey-10)"};
-    color: ${(props) =>
-      props.theme.name === "light"
         ? "var(--clr-grey-10)"
         : "var(--clr-grey-1)"};
+    color: ${(props) =>
+      props.theme.name === "light"
+        ? "var(--clr-grey-1)"
+        : "var(--clr-grey-10)"};
 
     h3 {
       font-weight: normal;

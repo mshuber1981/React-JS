@@ -11,9 +11,9 @@ const StyledReview = styled.article`
   border: 0.15rem solid var(--clr-primary-5);
   transition: var(--transition);
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+    props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
   color: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
+    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
@@ -59,8 +59,8 @@ const StyledReview = styled.article`
     margin-bottom: 0.75rem;
     color: ${(props) =>
       props.theme.name === "light"
-        ? "var(--clr-grey-10)"
-        : "var(--clr-grey-1)"};
+        ? "var(--clr-grey-1)"
+        : "var(--clr-grey-10)"};
   }
 
   .prev-btn,

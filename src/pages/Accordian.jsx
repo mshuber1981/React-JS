@@ -17,13 +17,11 @@ const StyledAccordian = styled.main`
     display: grid;
     gap: 1rem 2rem;
     background: ${(props) =>
+      props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
+    color: ${(props) =>
       props.theme.name === "light"
         ? "var(--clr-grey-1)"
         : "var(--clr-grey-10)"};
-    color: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-10)"
-        : "var(--clr-grey-1)"};
     box-shadow: ${(props) =>
       props.theme.name === "light"
         ? "var(--light-shadow)"

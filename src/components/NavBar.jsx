@@ -8,7 +8,9 @@ const StyledNavBar = styled.nav`
   width: 100%;
   z-index: 2;
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+    props.theme.name === "light"
+      ? "var(--clr-primary-5)"
+      : "var(--clr-grey-1)"};
 
   .nav-center {
     max-width: var(--max-width);
@@ -21,13 +23,19 @@ const StyledNavBar = styled.nav`
       align-items: center;
       font-size: 2rem;
       margin: 0 0.5rem;
-      color: var(--clr-primary-5);
+      color: ${(props) =>
+        props.theme.name === "light"
+          ? "var(--clr-grey-10)"
+          : "var(--clr-primary-5)"};
 
       .nav-btn {
         line-height: 0;
         background: transparent;
         border-color: transparent;
-        color: var(--clr-primary-5);
+        color: ${(props) =>
+          props.theme.name === "light"
+            ? "var(--clr-grey-10)"
+            : "var(--clr-primary-5)"};
         cursor: pointer;
         justify-self: end;
         font-size: 2rem;

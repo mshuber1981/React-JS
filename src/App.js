@@ -10,6 +10,7 @@ import BirthdayReminder from "./pages/BirthdayReminder";
 import ToursPage from "./pages/ToursPage";
 import Reviews from "./pages/Reviews";
 import Accordian from "./pages/Accordian";
+import Menu from "./pages/Menu";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/Tours" element={<ToursPage />} />
           <Route path="/Reviews" element={<Reviews />} />
           <Route path="/Accordian" element={<Accordian />} />
+          <Route path="/Menu" element={<Menu />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

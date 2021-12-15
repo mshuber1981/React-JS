@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 import { Loading } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Tours from "../components/Tours/Tours";
+
+const StyledToursPage = styled.div`
+  text-align: center;
+`;
 
 // const url = "https://course-api.com/react-tours-project";
 const url = "https://mshuber1981.github.io/React-JS/tours.json";
@@ -23,7 +28,7 @@ export default function App() {
     try {
       const response = await fetch(url).then(function (res) {
         if (!res.ok) {
-          throw Error(res.statusText);
+          throw Error(res.status);
         }
         return res;
       });
@@ -31,8 +36,9 @@ export default function App() {
       setLoading(false);
       setTours(tours);
     } catch (error) {
+      const errorMessage = `Error: ${error.message}`;
       setLoading(false);
-      setError(error.message);
+      setError(errorMessage);
       console.log(error);
     }
   };
@@ -57,7 +63,10 @@ export default function App() {
         <NavBar />
         <SideBar />
         <main>
-          <h2>{error}</h2>
+          <StyledToursPage>
+            <h2>{error}</h2>
+            <p>Check fetch url: {url}</p>
+          </StyledToursPage>
         </main>
       </>
     );

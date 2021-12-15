@@ -18,12 +18,12 @@ const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themes = {
   light: {
     name: "light",
-    color: "hsl(209, 61%, 16%)",
-    background: "hsl(210, 36%, 96%)",
+    color: "var(--clr-grey-1)",
+    background: "var(--clr-grey-10)",
   },
   dark: {
     name: "dark",
-    color: "hsl(210, 36%, 96%)",
+    color: "var(--clr-grey-10)",
     background: "#131722",
   },
 };

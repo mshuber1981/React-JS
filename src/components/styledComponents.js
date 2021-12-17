@@ -42,7 +42,6 @@ export const OuterButton = styled.button.attrs((props) => {
   font-size: 1rem;
   border: 2px solid var(--clr-primary-5);
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
   background: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};

@@ -21,9 +21,7 @@ const StyledBirthdayReminder = styled.main`
         ? "var(--light-shadow)"
         : "var(--lw-shadow)"};
     background: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-10)"
-        : "var(--clr-grey-1)"};
+      props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
     color: ${(props) =>
       props.theme.name === "light"
         ? "var(--clr-grey-1)"

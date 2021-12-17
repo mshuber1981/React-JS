@@ -13,7 +13,7 @@ const StyledProject = styled.article`
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
   background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
+    props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-1)"};
   color: ${(props) =>
     props.theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
 
@@ -75,7 +75,10 @@ const StyledProject = styled.article`
         justify-self: end;
 
         &:hover {
-          color: var(--clr-primary-1);
+          color: ${(props) =>
+            props.theme.name === "light"
+              ? "var(--clr-grey-1)"
+              : "var(--clr-grey-10)"};
         }
       }
     }

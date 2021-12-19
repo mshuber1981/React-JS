@@ -5,6 +5,7 @@ import Tours from "./media/cards/Tours.PNG";
 import Reviews from "./media/cards/Reviews.PNG";
 import Accordian from "./media/cards/Accordian.PNG";
 import Menu from "./media/cards/Menu.PNG";
+import Tabs from "./media/cards/Tabs.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -68,6 +69,16 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Menu.jsx",
+  },
+  {
+    id: 6,
+    name: "Tabs",
+    image: Tabs,
+    link: "/Tabs",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Tabs.jsx",
   },
 ];
 

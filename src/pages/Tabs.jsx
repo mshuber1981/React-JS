@@ -5,8 +5,8 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 
-const url = "https://course-api.com/react-tabs-project";
-// const url = "https://mshuber1981.github.io/React-JS/tabs.json";
+// const url = "https://course-api.com/react-tabs-project";
+const url = "https://mshuber1981.github.io/React-JS/tabs.json";
 
 const StyledTabs = styled.main`
   text-align: center;
@@ -143,8 +143,8 @@ export default function Tabs() {
       setLoading(false);
     } catch (error) {
       const errorMessage = `Error: ${error.message}`;
-      setLoading(false);
       setError(errorMessage);
+      setLoading(false);
       console.log(error);
     }
   };

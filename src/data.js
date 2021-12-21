@@ -6,6 +6,7 @@ import Reviews from "./media/cards/Reviews.PNG";
 import Accordian from "./media/cards/Accordian.PNG";
 import Menu from "./media/cards/Menu.PNG";
 import Tabs from "./media/cards/Tabs.PNG";
+import Slider from "./media/cards/Slider.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -79,6 +80,16 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Tabs.jsx",
+  },
+  {
+    id: 7,
+    name: "Slider",
+    image: Slider,
+    link: "/Slider",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Slider.jsx",
   },
 ];
 

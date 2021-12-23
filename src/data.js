@@ -91,6 +91,16 @@ export const projects = [
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Slider.jsx",
   },
+  {
+    id: 8,
+    name: "Lorem Ipsum",
+    image: Slider,
+    link: "/LoremIpsum",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/LoremIpsum.jsx",
+  },
 ];
 
 // Social Media

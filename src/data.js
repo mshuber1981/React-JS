@@ -7,6 +7,7 @@ import Accordian from "./media/cards/Accordian.PNG";
 import Menu from "./media/cards/Menu.PNG";
 import Tabs from "./media/cards/Tabs.PNG";
 import Slider from "./media/cards/Slider.PNG";
+import Lorem from "./media/cards/Lorem.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -94,7 +95,7 @@ export const projects = [
   {
     id: 8,
     name: "Lorem Ipsum",
-    image: Slider,
+    image: Lorem,
     link: "/LoremIpsum",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

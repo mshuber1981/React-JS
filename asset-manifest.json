@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.3150aa39.chunk.css",
-    "main.js": "/React-JS/static/js/main.b5292de0.chunk.js",
-    "main.js.map": "/React-JS/static/js/main.b5292de0.chunk.js.map",
+    "main.js": "/React-JS/static/js/main.e4ae1145.chunk.js",
+    "main.js.map": "/React-JS/static/js/main.e4ae1145.chunk.js.map",
     "runtime-main.js": "/React-JS/static/js/runtime-main.1ea59fea.js",
     "runtime-main.js.map": "/React-JS/static/js/runtime-main.1ea59fea.js.map",
     "static/js/2.ef25a29b.chunk.js": "/React-JS/static/js/2.ef25a29b.chunk.js",
@@ -12,6 +12,7 @@
     "static/js/2.ef25a29b.chunk.js.LICENSE.txt": "/React-JS/static/js/2.ef25a29b.chunk.js.LICENSE.txt",
     "static/media/Accordian.f620e0d0.PNG": "/React-JS/static/media/Accordian.f620e0d0.PNG",
     "static/media/BirthdayReminder.db6a4484.PNG": "/React-JS/static/media/BirthdayReminder.db6a4484.PNG",
+    "static/media/Lorem.aac1aeca.PNG": "/React-JS/static/media/Lorem.aac1aeca.PNG",
     "static/media/Menu.a1080b06.PNG": "/React-JS/static/media/Menu.a1080b06.PNG",
     "static/media/Reviews.05130110.PNG": "/React-JS/static/media/Reviews.05130110.PNG",
     "static/media/Slider.a2c1a32d.PNG": "/React-JS/static/media/Slider.a2c1a32d.PNG",
@@ -31,6 +32,6 @@
     "static/js/runtime-main.1ea59fea.js",
     "static/js/2.ef25a29b.chunk.js",
     "static/css/main.3150aa39.chunk.css",
-    "static/js/main.b5292de0.chunk.js"
+    "static/js/main.e4ae1145.chunk.js"
   ]
 }

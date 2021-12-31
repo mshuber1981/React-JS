@@ -16,6 +16,11 @@ const StyledSideBar = styled.aside`
     props.theme.name === "light"
       ? "var(--clr-primary-5)"
       : "var(--clr-grey-1)"};
+  border-right: 0.15rem solid
+    ${(props) =>
+      props.theme.name === "light"
+        ? "var(--clr-primary-6)"
+        : "var(--clr-grey-2)"};
 
   .sidebar-header {
     display: flex;

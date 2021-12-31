@@ -11,6 +11,8 @@ const StyledNavBar = styled.nav`
     props.theme.name === "light"
       ? "var(--clr-primary-5)"
       : "var(--clr-grey-1)"};
+  box-shadow: ${(props) =>
+    props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
   .nav-center {
     max-width: var(--max-width);

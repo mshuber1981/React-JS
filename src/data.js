@@ -96,7 +96,7 @@ export const projects = [
     id: 8,
     name: "Lorem Ipsum",
     image: Lorem,
-    link: "/LoremIpsum",
+    link: "/Lorem-Ipsum",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:

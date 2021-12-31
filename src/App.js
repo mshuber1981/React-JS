@@ -77,7 +77,7 @@ export default function App() {
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Tabs" element={<Tabs />} />
           <Route path="/Slider" element={<Slider />} />
-          <Route path="/LoremIpsum" element={<LoremIpsum />} />
+          <Route path="/Lorem-Ipsum" element={<LoremIpsum />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

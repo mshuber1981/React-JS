@@ -32,14 +32,30 @@ const themes = {
 };
 
 export default function App() {
-  const { theme, setDark, setLight } = useGlobalContext();
+  const { isSidebarOpen, closeSidebar, theme, setDark, setLight } =
+    useGlobalContext();
   // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
   const setDarkTheme = useRef(setDark);
   const setLightTheme = useRef(setLight);
+  const close = useRef(closeSidebar);
 
-  useEffect(function () {
-    darkMode ? setDarkTheme.current() : setLightTheme.current();
-  }, []);
+  const closeSide = () => close.current();
+
+  useEffect(
+    () => (darkMode ? setDarkTheme.current() : setLightTheme.current()),
+    []
+  );
+
+  useEffect(
+    function () {
+      const main = document.querySelector("main");
+
+      if (isSidebarOpen) main.addEventListener("click", closeSide);
+
+      return () => main.removeEventListener("click", closeSide);
+    },
+    [isSidebarOpen]
+  );
 
   window
     .matchMedia("(prefers-color-scheme: dark)")

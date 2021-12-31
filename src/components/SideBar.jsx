@@ -131,7 +131,7 @@ export default function SideBar() {
     >
       <div className="sidebar-header">
         <FaReact />
-        <button className="close-btn" onClick={closeSidebar}>
+        <button type="button" className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
       </div>

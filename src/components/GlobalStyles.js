@@ -42,10 +42,10 @@ Variables
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
-  --light-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
-  --dark-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
-  --lw-shadow: 5px 5px 12px rgba(255, 255, 255, 0.7);
-  --dw-shadow: 6px 6px 12px rgba(255, 255, 255, 0.9);
+  --light-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
+  --dark-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+  --lw-shadow: 3px 3px 4px rgba(255, 255, 255, 0.7);
+  --dw-shadow: 4px 4px 4px rgba(255, 255, 255, 0.9);
   --max-width: 1170px;
   --fixed-width: 620px;
 }

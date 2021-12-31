@@ -102,6 +102,16 @@ export const projects = [
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/LoremIpsum.jsx",
   },
+  {
+    id: 9,
+    name: "Color Generator",
+    image: Lorem,
+    link: "/Color-Generator",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ColorGenerator.jsx",
+  },
 ];
 
 // Social Media

@@ -14,6 +14,7 @@ import Menu from "./pages/Menu";
 import Tabs from "./pages/Tabs";
 import Slider from "./pages/Slider";
 import LoremIpsum from "./pages/LoremIpsum";
+import ColorGenerator from "./pages/ColorGenerator";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -78,6 +79,7 @@ export default function App() {
           <Route path="/Tabs" element={<Tabs />} />
           <Route path="/Slider" element={<Slider />} />
           <Route path="/Lorem-Ipsum" element={<LoremIpsum />} />
+          <Route path="/Color-Generator" element={<ColorGenerator />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

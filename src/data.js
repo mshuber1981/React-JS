@@ -8,6 +8,7 @@ import Menu from "./media/cards/Menu.PNG";
 import Tabs from "./media/cards/Tabs.PNG";
 import Slider from "./media/cards/Slider.PNG";
 import Lorem from "./media/cards/Lorem.PNG";
+import Colors from "./media/cards/Colors.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -105,7 +106,7 @@ export const projects = [
   {
     id: 9,
     name: "Color Generator",
-    image: Lorem,
+    image: Colors,
     link: "/Color-Generator",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

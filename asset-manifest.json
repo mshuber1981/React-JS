@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.3150aa39.chunk.css",
-    "main.js": "/React-JS/static/js/main.e40c1cf3.chunk.js",
-    "main.js.map": "/React-JS/static/js/main.e40c1cf3.chunk.js.map",
+    "main.js": "/React-JS/static/js/main.45e3151b.chunk.js",
+    "main.js.map": "/React-JS/static/js/main.45e3151b.chunk.js.map",
     "runtime-main.js": "/React-JS/static/js/runtime-main.1ea59fea.js",
     "runtime-main.js.map": "/React-JS/static/js/runtime-main.1ea59fea.js.map",
-    "static/js/2.ef25a29b.chunk.js": "/React-JS/static/js/2.ef25a29b.chunk.js",
-    "static/js/2.ef25a29b.chunk.js.map": "/React-JS/static/js/2.ef25a29b.chunk.js.map",
+    "static/js/2.b019712d.chunk.js": "/React-JS/static/js/2.b019712d.chunk.js",
+    "static/js/2.b019712d.chunk.js.map": "/React-JS/static/js/2.b019712d.chunk.js.map",
     "index.html": "/React-JS/index.html",
     "static/css/main.3150aa39.chunk.css.map": "/React-JS/static/css/main.3150aa39.chunk.css.map",
-    "static/js/2.ef25a29b.chunk.js.LICENSE.txt": "/React-JS/static/js/2.ef25a29b.chunk.js.LICENSE.txt",
+    "static/js/2.b019712d.chunk.js.LICENSE.txt": "/React-JS/static/js/2.b019712d.chunk.js.LICENSE.txt",
     "static/media/Accordian.f620e0d0.PNG": "/React-JS/static/media/Accordian.f620e0d0.PNG",
     "static/media/BirthdayReminder.db6a4484.PNG": "/React-JS/static/media/BirthdayReminder.db6a4484.PNG",
+    "static/media/Colors.e0f169fe.PNG": "/React-JS/static/media/Colors.e0f169fe.PNG",
     "static/media/Lorem.aac1aeca.PNG": "/React-JS/static/media/Lorem.aac1aeca.PNG",
     "static/media/Menu.a1080b06.PNG": "/React-JS/static/media/Menu.a1080b06.PNG",
     "static/media/Reviews.05130110.PNG": "/React-JS/static/media/Reviews.05130110.PNG",
@@ -30,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1ea59fea.js",
-    "static/js/2.ef25a29b.chunk.js",
+    "static/js/2.b019712d.chunk.js",
     "static/css/main.3150aa39.chunk.css",
-    "static/js/main.e40c1cf3.chunk.js"
+    "static/js/main.45e3151b.chunk.js"
   ]
 }

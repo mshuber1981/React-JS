@@ -75,10 +75,6 @@ const StyledColorGenerator = styled.main`
       h3 {
         font-size: 1rem;
       }
-
-      /* .btn {
-        font-size: 0.85rem;
-      } */
     }
   }
 

@@ -113,6 +113,16 @@ export const projects = [
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ColorGenerator.jsx",
   },
+  {
+    id: 10,
+    name: "To Do",
+    image: Colors,
+    link: "/To-Do",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToDo.jsx",
+  },
 ];
 
 // Social Media

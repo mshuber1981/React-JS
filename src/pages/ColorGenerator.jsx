@@ -2,33 +2,40 @@ import { useState } from "react";
 import styled from "styled-components";
 // https://github.com/noeldelgado/Values.js/
 import Values from "values.js";
+import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import SingleColor from "../components/Color-Generator/SingleColor";
 
 const StyledColorGenerator = styled.main`
   .container {
+    margin-top: 5rem;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100px;
-    margin-top: 1rem;
 
-    h3 {
-      margin-bottom: 0;
-      margin-right: 2rem;
+    h4 {
+      margin: 1rem 0;
     }
 
-    input {
+    .input {
       border-color: transparent;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
       padding: 0.5rem 1rem;
       font-size: 1.2rem;
       border-top-left-radius: var(--radius);
       border-bottom-left-radius: var(--radius);
+      max-width: 60vw;
     }
 
-    input.error {
+    .input.error {
       border: 2px solid var(--clr-red-dark);
+    }
+
+    .error {
+      color: var(--clr-red-dark);
     }
 
     .btn {
@@ -69,15 +76,14 @@ const StyledColorGenerator = styled.main`
         font-size: 1rem;
       }
 
-      input,
-      .btn {
+      /* .btn {
         font-size: 0.85rem;
-      }
+      } */
     }
   }
 
   .colors {
-    min-height: calc(100vh - 100px);
+    min-height: 90vh;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
@@ -132,8 +138,11 @@ export default function ColorGenerator() {
       <NavBar />
       <SideBar />
       <StyledColorGenerator>
-        <section className="section container">
-          <h3>Color Generator</h3>
+        <section className="container">
+          <Title>
+            <h2>Color Generator</h2>
+            <div className="underline"></div>
+          </Title>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -142,25 +151,23 @@ export default function ColorGenerator() {
                 setColor(e.target.value);
               }}
               placeholder="#00d8ff"
-              className={`${error ? "error" : null}`}
+              className={`input ${error ? "error" : null}`}
             />
             <button className="btn" type="submit">
               submit
             </button>
           </form>
+          {error && <h4 className="error">Please enter a valid Hex color</h4>}
+          <input
+            type="color"
+            value={color2}
+            onChange={function (e) {
+              setColor2(e.target.value);
+              setColor(e.target.value);
+            }}
+          />
+          <h4>Select a color below to copy to clipboard</h4>
         </section>
-        {error && <h4 className="error">Please enter a valid Hex color</h4>}
-        <br />
-        <input
-          type="color"
-          value={color2}
-          onChange={function (e) {
-            setColor2(e.target.value);
-            setColor(e.target.value);
-          }}
-        />
-        <br />
-        <h4>Select a color below to copy to clipboard</h4>
         <section className="colors">
           {list.map(function (color, index) {
             return (

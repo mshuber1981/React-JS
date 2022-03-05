@@ -9,7 +9,10 @@ const StyledToDo = styled.main`
   .section-center {
     border-radius: var(--radius);
     transition: var(--transition);
+    margin: 5rem 0;
     padding: 2rem;
+    max-width: 900px;
+    min-height: 450px;
     background: ${(props) =>
       props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
     color: ${(props) =>
@@ -20,6 +23,98 @@ const StyledToDo = styled.main`
       props.theme.name === "light"
         ? "var(--light-shadow)"
         : "var(--lw-shadow)"};
+
+    .form {
+      .alert {
+        margin-bottom: 1rem;
+        height: 1.25rem;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        font-size: 0.7rem;
+        border-radius: 0.25rem;
+        letter-spacing: var(--spacing);
+        text-transform: capitalize;
+      }
+
+      .alert-danger {
+        color: #721c24;
+        background: #f8d7da;
+      }
+      .alert-success {
+        color: #155724;
+        background: #d4edda;
+      }
+
+      h3 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .form-control {
+        display: flex;
+        justify-content: center;
+
+        .input {
+          padding: 0.25rem;
+          padding-left: 1rem;
+          background: var(--clr-grey-10);
+          border-top-left-radius: var(--radius);
+          border-bottom-left-radius: var(--radius);
+          border-color: transparent;
+          font-size: 1rem;
+          flex: 1 0 auto;
+          color: var(--clr-grey-5);
+        }
+
+        .submit-btn {
+          background: var(--clr-primary-8);
+          border-color: transparent;
+          flex: 0 0 5rem;
+          display: grid;
+          align-items: center;
+          padding: 0.25rem;
+          text-transform: capitalize;
+          letter-spacing: 2px;
+          border-top-right-radius: var(--radius);
+          border-bottom-right-radius: var(--radius);
+          cursor: pointer;
+          content: var(--clr-primary-5);
+          transition: var(--transition);
+          font-size: 0.85rem;
+
+          &:hover {
+            background: var(--clr-primary-5);
+            color: var(--clr-white);
+          }
+        }
+      }
+    }
+
+    .container {
+      margin-top: 2rem;
+
+      .clear-btn {
+        text-transform: capitalize;
+        width: 10rem;
+        height: 1.5rem;
+        display: grid;
+        align-items: center;
+        background: transparent;
+        border-color: transparent;
+        color: var(--clr-red-light);
+        margin: 0 auto;
+        font-size: 0.85rem;
+        letter-spacing: var(--spacing);
+        cursor: pointer;
+        transition: var(--transition);
+        margin-top: 1.25rem;
+
+        &:hover {
+          color: var(--clr-red-dark);
+        }
+      }
+    }
   }
 `;
 
@@ -96,17 +191,15 @@ export default function ToDo() {
       <SideBar />
       <StyledToDo>
         <section className="section-center">
-          <form className="grocery-form" onSubmit={handleSubmit}>
+          <form className="form" onSubmit={handleSubmit}>
             {alert.show && (
               <Alert {...alert} removeAlert={showAlert} list={list} />
             )}
-
-            <h3>grocery bud</h3>
+            <h3>To Do</h3>
             <div className="form-control">
               <input
                 type="text"
-                className="grocery"
-                placeholder="e.g. eggs"
+                className="input"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -116,7 +209,7 @@ export default function ToDo() {
             </div>
           </form>
           {list.length > 0 && (
-            <div className="grocery-container">
+            <div className="container">
               <List items={list} removeItem={removeItem} editItem={editItem} />
               <button className="clear-btn" onClick={clearList}>
                 clear items

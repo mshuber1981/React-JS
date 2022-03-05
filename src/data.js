@@ -9,6 +9,7 @@ import Tabs from "./media/cards/Tabs.PNG";
 import Slider from "./media/cards/Slider.PNG";
 import Lorem from "./media/cards/Lorem.PNG";
 import Colors from "./media/cards/Colors.PNG";
+import ToDo from "./media/cards/ToDo.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -116,7 +117,7 @@ export const projects = [
   {
     id: 10,
     name: "To Do",
-    image: Colors,
+    image: ToDo,
     link: "/To-Do",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

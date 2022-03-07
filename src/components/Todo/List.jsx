@@ -23,8 +23,8 @@ const StyledList = styled.article`
     background: transparent;
     border-color: transparent;
     cursor: pointer;
-    font-size: 1rem;
-    margin: 0 0.15rem;
+    font-size: 1.25rem;
+    margin: 0 0.25rem;
     transition: var(--transition);
   }
 

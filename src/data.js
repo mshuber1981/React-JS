@@ -1,5 +1,12 @@
 // Media/icons
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import React from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaCreditCard,
+  FaBook,
+  FaBriefcase,
+} from "react-icons/fa";
 import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
 import Tours from "./media/cards/Tours.PNG";
 import Reviews from "./media/cards/Reviews.PNG";
@@ -123,6 +130,16 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToDo.jsx",
+  },
+  {
+    id: 11,
+    name: "Stripe Submenus",
+    image: ToDo,
+    link: "/Stripe-Submenus",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Stripe.jsx",
   },
 ];
 
@@ -331,4 +348,32 @@ export const text = [
   "Salvia glossier subway tile, leggings mustache YOLO semiotics chia. Pitchfork tbh af blog church-key meggings vaporware PBR&B master cleanse post-ironic man bun pabst mustache letterpress synth. Snackwave raw denim godard, 3 wolf moon shaman offal kitsch unicorn live-edge selvage schlitz fashion axe vaporware drinking vinegar prism. Shabby chic tacos artisan, chambray chicharrones cardigan leggings typewriter af pop-up williamsburg meditation PBR&B viral. You probably haven't heard of them DIY jean shorts subway tile fashion axe bushwick kitsch tumeric cloud bread vaporware freegan franzen pork belly chicharrones banh mi.",
   "Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.",
   "Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.",
+];
+
+// Stripe
+export const sublinks = [
+  {
+    page: "products",
+    links: [
+      { label: "payment", icon: <FaCreditCard />, url: "/products" },
+      { label: "terminal", icon: <FaCreditCard />, url: "/products" },
+      { label: "connect", icon: <FaCreditCard />, url: "/products" },
+    ],
+  },
+  {
+    page: "developers",
+    links: [
+      { label: "plugins", icon: <FaBook />, url: "/products" },
+      { label: "libraries", icon: <FaBook />, url: "/products" },
+      { label: "help", icon: <FaBook />, url: "/products" },
+      { label: "billing", icon: <FaBook />, url: "/products" },
+    ],
+  },
+  {
+    page: "company",
+    links: [
+      { label: "about", icon: <FaBriefcase />, url: "/products" },
+      { label: "customers", icon: <FaBriefcase />, url: "/products" },
+    ],
+  },
 ];

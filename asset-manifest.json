@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.7d40bf6a.css",
-    "main.js": "/React-JS/static/js/main.a8503aea.js",
+    "main.js": "/React-JS/static/js/main.3c0feb7d.js",
     "static/media/Tours.PNG": "/React-JS/static/media/Tours.3b96756a245b8804bf8a.PNG",
+    "static/media/Stripe.PNG": "/React-JS/static/media/Stripe.2480ad32b8618c13eebb.PNG",
     "static/media/Menu.PNG": "/React-JS/static/media/Menu.a1080b0662f3e105f5eb.PNG",
+    "static/media/phone.svg": "/React-JS/static/media/phone.94a7a4fe1f82aed65bc22c10a1c6d6ef.svg",
     "static/media/BirthdayReminder.PNG": "/React-JS/static/media/BirthdayReminder.db6a4484a08d48b0504c.PNG",
     "static/media/item-7.jpeg": "/React-JS/static/media/item-7.2b2d85320c08729e6a58.jpeg",
     "static/media/Reviews.PNG": "/React-JS/static/media/Reviews.05130110d08a5ba68b2e.PNG",
@@ -21,12 +23,14 @@
     "static/media/Lorem.PNG": "/React-JS/static/media/Lorem.aac1aeca803be2ebdc49.PNG",
     "static/media/Colors.PNG": "/React-JS/static/media/Colors.e0f169feaa80a9e2d2d9.PNG",
     "static/media/ToDo.PNG": "/React-JS/static/media/ToDo.97503f982b684e178078.PNG",
+    "static/media/logo.svg": "/React-JS/static/media/logo.6ad422bb585e8c12e29343696a1349aa.svg",
+    "static/media/hero.svg": "/React-JS/static/media/hero.acf1e00e9c9a661a4b0af9b26d5af432.svg",
     "index.html": "/React-JS/index.html",
     "main.7d40bf6a.css.map": "/React-JS/static/css/main.7d40bf6a.css.map",
-    "main.a8503aea.js.map": "/React-JS/static/js/main.a8503aea.js.map"
+    "main.3c0feb7d.js.map": "/React-JS/static/js/main.3c0feb7d.js.map"
   },
   "entrypoints": [
     "static/css/main.7d40bf6a.css",
-    "static/js/main.a8503aea.js"
+    "static/js/main.3c0feb7d.js"
   ]
 }

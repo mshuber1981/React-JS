@@ -196,6 +196,23 @@ main {
     width: 400px;
   }
 }
+
+/* Stripe */
+@media screen and (min-width: 800px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+}
+
+.sidebar-wrapper.show {
+  visibility: visible;
+  z-index: 2;
+  transform: scale(1);
+}
+
+.submenu.show {
+  display: block;
+}
 `;
 
 export default GlobalStyles;

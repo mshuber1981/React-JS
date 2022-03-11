@@ -17,6 +17,7 @@ import Slider from "./media/cards/Slider.PNG";
 import Lorem from "./media/cards/Lorem.PNG";
 import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
+import Stripe from "./media/cards/Stripe.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -134,7 +135,7 @@ export const projects = [
   {
     id: 11,
     name: "Stripe Submenus",
-    image: ToDo,
+    image: Stripe,
     link: "/Stripe-Submenus",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
@@ -355,25 +356,25 @@ export const sublinks = [
   {
     page: "products",
     links: [
-      { label: "payment", icon: <FaCreditCard />, url: "/products" },
-      { label: "terminal", icon: <FaCreditCard />, url: "/products" },
-      { label: "connect", icon: <FaCreditCard />, url: "/products" },
+      { label: "payment", icon: <FaCreditCard />, url: "https://stripe.com/" },
+      { label: "terminal", icon: <FaCreditCard />, url: "https://stripe.com/" },
+      { label: "connect", icon: <FaCreditCard />, url: "https://stripe.com/" },
     ],
   },
   {
     page: "developers",
     links: [
-      { label: "plugins", icon: <FaBook />, url: "/products" },
-      { label: "libraries", icon: <FaBook />, url: "/products" },
-      { label: "help", icon: <FaBook />, url: "/products" },
-      { label: "billing", icon: <FaBook />, url: "/products" },
+      { label: "plugins", icon: <FaBook />, url: "https://stripe.com/" },
+      { label: "libraries", icon: <FaBook />, url: "https://stripe.com/" },
+      { label: "help", icon: <FaBook />, url: "https://stripe.com/" },
+      { label: "billing", icon: <FaBook />, url: "https://stripe.com/" },
     ],
   },
   {
     page: "company",
     links: [
-      { label: "about", icon: <FaBriefcase />, url: "/products" },
-      { label: "customers", icon: <FaBriefcase />, url: "/products" },
+      { label: "about", icon: <FaBriefcase />, url: "https://stripe.com/" },
+      { label: "customers", icon: <FaBriefcase />, url: "https://stripe.com/" },
     ],
   },
 ];

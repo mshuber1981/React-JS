@@ -17,6 +17,7 @@ import LoremIpsum from "./pages/LoremIpsum";
 import ColorGenerator from "./pages/ColorGenerator";
 import ToDo from "./pages/ToDo";
 import Stripe from "./pages/Stripe";
+import Cart from "./pages/Cart";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -84,6 +85,7 @@ export default function App() {
           <Route path="/Color-Generator" element={<ColorGenerator />} />
           <Route path="/To-Do" element={<ToDo />} />
           <Route path="/Stripe-Submenus" element={<Stripe />} />
+          <Route path="/Cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

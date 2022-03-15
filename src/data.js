@@ -143,7 +143,7 @@ export const projects = [
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Stripe.jsx",
   },
   {
-    id: 11,
+    id: 12,
     name: "Cart",
     image: Stripe,
     link: "/Cart",

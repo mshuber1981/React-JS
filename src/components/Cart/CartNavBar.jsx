@@ -1,7 +1,55 @@
 import { useGlobalContext } from "../../context";
 import styled from "styled-components";
 
-const StyledCartNavBar = styled.nav``;
+const StyledCartNavBar = styled.nav`
+  position: fixed;
+  width: 100%;
+  background: var(--clr-primary-5);
+  /* padding: 1.25rem 2rem; */
+  margin-top: 40px;
+
+  .nav-center {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .nav-container {
+      display: block;
+      position: relative;
+      line-height: 0;
+
+      svg {
+        width: 2rem;
+        fill: var(--clr-white);
+      }
+
+      .amount-container {
+        position: absolute;
+        top: -0.85rem;
+        right: -0.85rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        background: var(--clr-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .total-amount {
+          margin-bottom: 0;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+`;
 
 export default function CartNavBar() {
   const { amount } = useGlobalContext();

@@ -3,7 +3,52 @@ import styled from "styled-components";
 // Components
 import CartItem from "./CartItem";
 
-const StyledCartContainer = styled.section``;
+const StyledCartContainer = styled.section`
+  min-height: calc(100vh - 80px);
+  width: 90vw;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  max-width: 50rem;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .empty-cart {
+    text-transform: lowercase;
+    color: var(--clr-grey-5);
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+
+    .cart-total h4 {
+      text-transform: capitalize;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .clear-btn {
+      background: transparent;
+      padding: 0.5rem 1rem;
+      color: var(--clr-red-dark);
+      border: 1px solid var(--clr-red-dark);
+      margin-top: 2.25rem;
+      border-radius: var(--radius);
+
+      &:hover {
+        background: var(--clr-red-light);
+        color: var(--clr-red-dark);
+        border-color: var(--clr-red-light);
+      }
+    }
+  }
+`;
 
 export default function CartContainer() {
   const { cart, total, clearCart } = useGlobalContext();

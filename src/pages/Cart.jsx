@@ -6,14 +6,18 @@ import SideBar from "../components/SideBar";
 import CartNavBar from "../components/Cart/CartNavBar";
 import CartContainer from "../components/Cart/CartContainer";
 
-const StyledCart = styled.main``;
+const StyledCart = styled.main`
+  .container {
+    width: 100%;
+  }
+`;
 
 export default function Cart() {
   const { loading } = useGlobalContext();
 
   if (loading) {
     return (
-      <main className="loading">
+      <main>
         <h1>Loading...</h1>
       </main>
     );
@@ -24,8 +28,10 @@ export default function Cart() {
       <NavBar />
       <SideBar />
       <StyledCart>
-        <CartNavBar />
-        <CartContainer />
+        <div className="container">
+          <CartNavBar />
+          <CartContainer />
+        </div>
       </StyledCart>
     </>
   );

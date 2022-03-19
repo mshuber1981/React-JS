@@ -25,13 +25,13 @@ const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themes = {
   light: {
     name: "light",
-    color: "var(--clr-grey-1)",
-    background: "var(--clr-grey-10)",
+    color: "#27272A",
+    background: "#FBFDFF",
   },
   dark: {
     name: "dark",
-    color: "var(--clr-grey-10)",
-    background: "#131722",
+    color: "#FBFDFF",
+    background: "#27272A",
   },
 };
 

@@ -18,6 +18,7 @@ import Lorem from "./media/cards/Lorem.PNG";
 import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
 import Stripe from "./media/cards/Stripe.PNG";
+import Cart from "./media/cards/Cart.PNG";
 
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
@@ -145,7 +146,7 @@ export const projects = [
   {
     id: 12,
     name: "Cart",
-    image: Stripe,
+    image: Cart,
     link: "/Cart",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

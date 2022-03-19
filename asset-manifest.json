@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.7d40bf6a.css",
-    "main.js": "/React-JS/static/js/main.3c0feb7d.js",
+    "main.js": "/React-JS/static/js/main.b004d7a0.js",
     "static/media/Tours.PNG": "/React-JS/static/media/Tours.3b96756a245b8804bf8a.PNG",
     "static/media/Stripe.PNG": "/React-JS/static/media/Stripe.2480ad32b8618c13eebb.PNG",
     "static/media/Menu.PNG": "/React-JS/static/media/Menu.a1080b0662f3e105f5eb.PNG",
@@ -18,6 +18,7 @@
     "static/media/item-3.jpeg": "/React-JS/static/media/item-3.41dbf97f88e1e73a7474.jpeg",
     "static/media/item-5.jpeg": "/React-JS/static/media/item-5.39ce038c4ceb093d7c66.jpeg",
     "static/media/item-9.jpeg": "/React-JS/static/media/item-9.46d925888a7d2fa971d6.jpeg",
+    "static/media/Cart.PNG": "/React-JS/static/media/Cart.d258998c279ede784e70.PNG",
     "static/media/Tabs.PNG": "/React-JS/static/media/Tabs.aae1e51faa2413b53c3f.PNG",
     "static/media/Accordian.PNG": "/React-JS/static/media/Accordian.f620e0d04f866765a35e.PNG",
     "static/media/Lorem.PNG": "/React-JS/static/media/Lorem.aac1aeca803be2ebdc49.PNG",
@@ -27,10 +28,10 @@
     "static/media/hero.svg": "/React-JS/static/media/hero.acf1e00e9c9a661a4b0af9b26d5af432.svg",
     "index.html": "/React-JS/index.html",
     "main.7d40bf6a.css.map": "/React-JS/static/css/main.7d40bf6a.css.map",
-    "main.3c0feb7d.js.map": "/React-JS/static/js/main.3c0feb7d.js.map"
+    "main.b004d7a0.js.map": "/React-JS/static/js/main.b004d7a0.js.map"
   },
   "entrypoints": [
     "static/css/main.7d40bf6a.css",
-    "static/js/main.3c0feb7d.js"
+    "static/js/main.b004d7a0.js"
   ]
 }

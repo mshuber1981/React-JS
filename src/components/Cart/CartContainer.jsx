@@ -4,12 +4,6 @@ import styled from "styled-components";
 import CartItem from "./CartItem";
 
 const StyledCartContainer = styled.section`
-  min-height: calc(100vh - 80px);
-  width: 90vw;
-  margin: 0 auto;
-  padding: 2.5rem 0;
-  max-width: 50rem;
-
   h2 {
     text-transform: uppercase;
     text-align: center;
@@ -55,7 +49,7 @@ export default function CartContainer() {
 
   if (cart.length === 0) {
     return (
-      <StyledCartContainer className="cart">
+      <StyledCartContainer className="section section-center cart">
         {/* cart header */}
         <header>
           <h2>your bag</h2>
@@ -65,7 +59,7 @@ export default function CartContainer() {
     );
   }
   return (
-    <StyledCartContainer className="cart">
+    <StyledCartContainer className="section section-center cart">
       {/* cart header */}
       <header>
         <h2>your bag</h2>

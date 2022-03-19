@@ -5,8 +5,7 @@ const StyledCartNavBar = styled.nav`
   position: fixed;
   width: 100%;
   background: var(--clr-primary-5);
-  /* padding: 1.25rem 2rem; */
-  margin-top: 40px;
+  padding: 1.25rem 2rem;
 
   .nav-center {
     max-width: 50rem;

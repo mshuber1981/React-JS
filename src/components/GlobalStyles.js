@@ -46,6 +46,7 @@ Variables
   --dark-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
   --lw-shadow: 3px 3px 4px rgba(255, 255, 255, 0.7);
   --dw-shadow: 4px 4px 4px rgba(255, 255, 255, 0.9);
+  --nav-height: 3.5rem;
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -156,7 +157,7 @@ img {
 }
 
 main {
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   justify-content: center;

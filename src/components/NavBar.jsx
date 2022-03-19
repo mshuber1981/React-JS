@@ -3,9 +3,18 @@ import styled from "styled-components";
 import { bounce } from "./styledComponents";
 import { FaReact, FaBars } from "react-icons/fa";
 
+const StyledSpacer = styled.div`
+  height: var(--nav-height);
+`;
+
 const StyledNavBar = styled.nav`
   position: fixed;
+  top: 0;
   width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 2;
   background: ${(props) =>
     props.theme.name === "light"
@@ -15,6 +24,7 @@ const StyledNavBar = styled.nav`
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
   .nav-center {
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0.25rem 0;
@@ -54,15 +64,18 @@ export default function NavBar() {
   const { openSidebar } = useGlobalContext();
 
   return (
-    <StyledNavBar>
-      <div className="nav-center">
-        <div className="nav-header">
-          <FaReact />
-          <button type="button" className="nav-btn" onClick={openSidebar}>
-            <FaBars />
-          </button>
+    <>
+      <StyledSpacer />
+      <StyledNavBar>
+        <div className="nav-center">
+          <div className="nav-header">
+            <FaReact />
+            <button type="button" className="nav-btn" onClick={openSidebar}>
+              <FaBars />
+            </button>
+          </div>
         </div>
-      </div>
-    </StyledNavBar>
+      </StyledNavBar>
+    </>
   );
 }

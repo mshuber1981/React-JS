@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// https://reactjs.org/docs/context.html
 import { AppProvider } from "./context";
 import "./index.css";
 import App from "./App";

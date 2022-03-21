@@ -8,7 +8,7 @@ import {
 // Data
 import { sublinks, cartItems } from "./data";
 // Reducers
-import reducer from "./reducers/cart";
+import cartReducer from "./components/Cart/cartReducer";
 
 const url = "https://course-api.com/react-useReducer-cart-project";
 const AppContext = createContext();
@@ -27,7 +27,7 @@ const AppProvider = function ({ children }) {
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
   // Cart
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, initialState);
 
   const setLight = () => setTheme("light");
 

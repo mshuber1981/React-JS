@@ -1,7 +1,9 @@
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
-import { bounce } from "./styledComponents";
+// Icons
 import { FaReact, FaBars } from "react-icons/fa";
+// Animation
+import { bounce } from "./styledComponents";
 
 const StyledSpacer = styled.div`
   height: var(--nav-height);

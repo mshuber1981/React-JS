@@ -1,7 +1,9 @@
-import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
+import styled from "styled-components";
+// Data
 import { sublinks } from "../../data";
+// Icons
+import { FaTimes } from "react-icons/fa";
 
 const StyledSidebar = styled.div`
   position: fixed;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Title } from "../components/styledComponents";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Title } from "../components/styledComponents";
 import Review from "../components/Reviews/Review";
 
 const StyledReviews = styled.main`

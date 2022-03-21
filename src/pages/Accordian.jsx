@@ -1,8 +1,10 @@
 import styled from "styled-components";
+// Data
 import { questions } from "../data";
-import { Title } from "../components/styledComponents";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Title } from "../components/styledComponents";
 import Question from "../components/Accordian/Question";
 
 const StyledAccordian = styled.main`

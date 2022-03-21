@@ -2,9 +2,10 @@ import { useState } from "react";
 import styled from "styled-components";
 // https://github.com/noeldelgado/Values.js/
 import Values from "values.js";
-import { Title } from "../components/styledComponents";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Title } from "../components/styledComponents";
 import SingleColor from "../components/Color-Generator/SingleColor";
 
 const StyledColorGenerator = styled.main`

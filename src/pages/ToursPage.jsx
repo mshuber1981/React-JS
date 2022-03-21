@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Loading } from "../components/styledComponents";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Loading } from "../components/styledComponents";
 import Tours from "../components/Tours/Tours";
 
 const StyledToursPage = styled.div`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// Components
 import { Title } from "../styledComponents";
 import Tour from "./Tour";
 

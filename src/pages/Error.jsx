@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Title, OuterButton } from "../components/styledComponents";
 
-export default function Counter() {
+export default function Error() {
   return (
     <>
       <main>

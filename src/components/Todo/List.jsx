@@ -1,5 +1,6 @@
-import { FaEdit, FaTrash } from "react-icons/fa";
 import styled from "styled-components";
+// Icons
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const StyledList = styled.article`
   display: flex;

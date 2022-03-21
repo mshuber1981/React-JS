@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import List from "../components/Todo/List";

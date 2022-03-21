@@ -7,6 +7,7 @@ import {
   FaBook,
   FaBriefcase,
 } from "react-icons/fa";
+// Card media
 import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
 import Tours from "./media/cards/Tours.PNG";
 import Reviews from "./media/cards/Reviews.PNG";
@@ -19,7 +20,6 @@ import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
 import Stripe from "./media/cards/Stripe.PNG";
 import Cart from "./media/cards/Cart.PNG";
-
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
 import MenuItem2 from "./media/menu/item-2.jpeg";

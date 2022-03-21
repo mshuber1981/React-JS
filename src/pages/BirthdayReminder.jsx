@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { people } from "../data";
 import styled from "styled-components";
-import { Title, InnerButton } from "../components/styledComponents";
+// Data
+import { people } from "../data";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Title, InnerButton } from "../components/styledComponents";
 
 const StyledBirthdayReminder = styled.main`
   text-align: center;

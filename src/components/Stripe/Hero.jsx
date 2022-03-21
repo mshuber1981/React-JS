@@ -1,8 +1,9 @@
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+// Media
 import phoneImg from "../../media/stripe/phone.svg";
 import hero from "../../media/stripe/hero.svg";
-import { useGlobalContext } from "../../context";
 
 const StyledHero = styled.main`
   &::before {

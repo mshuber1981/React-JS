@@ -2,8 +2,11 @@ import { useEffect, useRef } from "react";
 import { useGlobalContext } from "../context";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+// Data
 import { projects, socials } from "../data";
+// Icons
 import { FaReact, FaTimes } from "react-icons/fa";
+// Components
 import ToggleSwitch from "../components/ToggleSwitch";
 
 const StyledSideBar = styled.aside`

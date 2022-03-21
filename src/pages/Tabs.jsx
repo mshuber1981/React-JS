@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Loading, Title } from "../components/styledComponents";
+// Icons
 import { FaAngleDoubleRight } from "react-icons/fa";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Loading, Title } from "../components/styledComponents";
 
 // const url = "https://course-api.com/react-tabs-project";
 const url = "https://mshuber1981.github.io/React-JS/tabs.json";

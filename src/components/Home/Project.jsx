@@ -1,9 +1,11 @@
 import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { bounce } from "../styledComponents";
+// Icons
 import { RiComputerLine } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
+// Animation
+import { bounce } from "../styledComponents";
 
 const StyledProject = styled.article`
   border-radius: var(--radius);

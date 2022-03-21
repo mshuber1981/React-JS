@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// Components
 import { InnerButton } from "../styledComponents";
 
 const StyledCategories = styled.div`

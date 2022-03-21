@@ -1,8 +1,10 @@
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../media/stripe/logo.svg";
+// Icons
 import { FaBars } from "react-icons/fa";
-import { useGlobalContext } from "../../context";
+// Media
+import logo from "../../media/stripe/logo.svg";
 
 const StyledNavbar = styled.nav`
   height: 5rem;

@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
-// https://v5.reactrouter.com/web/guides/scroll-restoration
-import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
+// https://v5.reactrouter.com/web/guides/scroll-restoration
+import ScrollToTop from "./components/ScrollToTop";
+// Pages
 import Home from "./pages/Home";
 import BirthdayReminder from "./pages/BirthdayReminder";
 import ToursPage from "./pages/ToursPage";

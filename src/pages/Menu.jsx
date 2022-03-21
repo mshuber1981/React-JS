@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Title } from "../components/styledComponents";
+// Data
 import { items } from "../data";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { Title } from "../components/styledComponents";
 import Categories from "../components/Menu/Categories";
 import MenuItems from "../components/Menu/MenuItems";
 

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { InnerButton } from "../styledComponents";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// Data
 import { reviews } from "../../data";
+// Icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// Components
+import { InnerButton } from "../styledComponents";
 
 const StyledReview = styled.article`
   margin-top: 1rem;

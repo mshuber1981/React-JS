@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import styled from "styled-components";
+// Icons
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const StyledQuestion = styled.article`
   padding: 1rem 1.5rem;

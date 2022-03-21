@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+// Data
+import { reviews } from "../data";
+// Icons
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
-import { reviews } from "../data";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 

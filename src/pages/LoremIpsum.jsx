@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { InnerButton, Title } from "../components/styledComponents";
+// Data
 import { text } from "../data";
+// Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { InnerButton, Title } from "../components/styledComponents";
 
 const StyledLoremIpsum = styled.main`
   text-align: center;
@@ -46,10 +48,8 @@ export default function LoremIpsum() {
     let amount = parseInt(count);
     if (count <= 0) {
       amount = 1;
+      setCount(amount);
     }
-    // if (count > 8) {
-    //   amount = 8;
-    // }
     setText(text.slice(0, amount));
   };
 

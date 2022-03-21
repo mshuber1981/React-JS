@@ -1,3 +1,4 @@
+// Components
 import Navbar from "../components/Stripe/Navbar";
 import Sidebar from "../components/Stripe/Sidebar";
 import Hero from "../components/Stripe/Hero";

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
 import { useGlobalContext } from "../../context";
+import styled from "styled-components";
 
 const StyledSubmenu = styled.aside`
   &::before {

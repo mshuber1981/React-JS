@@ -1,4 +1,4 @@
-export default function reducer(state, action) {
+export default function cartReducer(state, action) {
   if (action.type === "CLEAR_CART") {
     return { ...state, cart: [] };
   }

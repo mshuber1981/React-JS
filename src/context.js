@@ -4,6 +4,7 @@ import {
   useContext,
   useReducer,
   useEffect,
+  useCallback,
 } from "react";
 // Data
 import { sublinks, cartItems } from "./data";
@@ -11,6 +12,8 @@ import { sublinks, cartItems } from "./data";
 import cartReducer from "./components/Cart/cartReducer";
 
 const url = "https://course-api.com/react-useReducer-cart-project";
+const cocktailsUrl =
+  "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const AppContext = createContext();
 
 const initialState = {
@@ -28,6 +31,10 @@ const AppProvider = function ({ children }) {
   const [location, setLocation] = useState({});
   // Cart
   const [state, dispatch] = useReducer(cartReducer, initialState);
+  // Cocktails
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("a");
+  const [cocktails, setCocktails] = useState([]);
 
   const setLight = () => setTheme("light");
 
@@ -52,6 +59,7 @@ const AppProvider = function ({ children }) {
   const closeSubmenu = () => {
     setIsSubmenuOpen(false);
   };
+
   // Cart
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
@@ -88,6 +96,45 @@ const AppProvider = function ({ children }) {
     dispatch({ type: "GET_TOTALS" });
   }, [state.cart]);
 
+  // Cocktails
+  const fetchDrinks = useCallback(
+    async function () {
+      setLoading(true);
+      try {
+        const response = await fetch(`${cocktailsUrl}${searchTerm}`);
+        const data = await response.json();
+        console.log(data);
+        const { drinks } = data;
+        if (drinks) {
+          const newCocktails = drinks.map(function (item) {
+            const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
+              item;
+
+            return {
+              id: idDrink,
+              name: strDrink,
+              image: strDrinkThumb,
+              info: strAlcoholic,
+              glass: strGlass,
+            };
+          });
+          setCocktails(newCocktails);
+        } else {
+          setCocktails([]);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    },
+    [searchTerm]
+  );
+
+  useEffect(() => {
+    fetchDrinks();
+  }, [searchTerm, fetchDrinks]);
+
   return (
     <AppContext.Provider
       value={{
@@ -110,6 +157,11 @@ const AppProvider = function ({ children }) {
         increase,
         decrease,
         toggleAmount,
+        // Cocktails
+        loading,
+        cocktails,
+        searchTerm,
+        setSearchTerm,
       }}
     >
       {children}

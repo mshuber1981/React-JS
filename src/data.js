@@ -153,6 +153,16 @@ export const projects = [
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Cart.jsx",
   },
+  {
+    id: 13,
+    name: "Cocktails",
+    image: Cart,
+    link: "/Cocktails",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Cocktails.jsx",
+  },
 ];
 
 // Social Media

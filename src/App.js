@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -19,6 +19,7 @@ import ColorGenerator from "./pages/ColorGenerator";
 import ToDo from "./pages/ToDo";
 import Stripe from "./pages/Stripe";
 import Cart from "./pages/Cart";
+import Cocktails from "./pages/Cocktails";
 import Error from "./pages/Error";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -39,34 +40,23 @@ const themes = {
 export default function App() {
   const { isSidebarOpen, closeSidebar, theme, setDark, setLight } =
     useGlobalContext();
-  // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
-  const setDarkTheme = useRef(setDark);
-  const setLightTheme = useRef(setLight);
-  const close = useRef(closeSidebar);
 
-  const closeSide = () => close.current();
-
-  useEffect(
-    () => (darkMode ? setDarkTheme.current() : setLightTheme.current()),
-    []
-  );
+  useEffect(() => (darkMode ? setDark : setLight), [setDark, setLight]);
 
   useEffect(
     function () {
       const main = document.querySelector("main");
 
-      if (isSidebarOpen) main.addEventListener("click", closeSide);
+      if (isSidebarOpen) main.addEventListener("click", closeSidebar);
 
-      return () => main.removeEventListener("click", closeSide);
+      return () => main.removeEventListener("click", closeSidebar);
     },
-    [isSidebarOpen]
+    [isSidebarOpen, closeSidebar]
   );
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) =>
-      e.matches ? setDarkTheme.current() : setLightTheme.current()
-    );
+    .addEventListener("change", (e) => (e.matches ? setDark : setLight));
 
   return (
     <HashRouter>
@@ -87,6 +77,7 @@ export default function App() {
           <Route path="/To-Do" element={<ToDo />} />
           <Route path="/Stripe-Submenus" element={<Stripe />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Cocktails" element={<Cocktails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

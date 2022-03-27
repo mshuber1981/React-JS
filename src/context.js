@@ -103,7 +103,7 @@ const AppProvider = function ({ children }) {
       try {
         const response = await fetch(`${cocktailsUrl}${searchTerm}`);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         const { drinks } = data;
         if (drinks) {
           const newCocktails = drinks.map(function (item) {

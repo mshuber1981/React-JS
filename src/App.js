@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -40,8 +40,14 @@ const themes = {
 export default function App() {
   const { isSidebarOpen, closeSidebar, theme, setDark, setLight } =
     useGlobalContext();
+  // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
+  const setDarkTheme = useRef(setDark);
+  const setLightTheme = useRef(setLight);
 
-  useEffect(() => (darkMode ? setDark : setLight), [setDark, setLight]);
+  useEffect(
+    () => (darkMode ? setDarkTheme.current() : setLightTheme.current()),
+    []
+  );
 
   useEffect(
     function () {
@@ -56,7 +62,9 @@ export default function App() {
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => (e.matches ? setDark : setLight));
+    .addEventListener("change", (e) =>
+      e.matches ? setDarkTheme.current() : setLightTheme.current()
+    );
 
   return (
     <HashRouter>

@@ -2,7 +2,41 @@ import { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context";
 import styled from "styled-components";
 
-const StyledSearchForm = styled.section``;
+const StyledSearchForm = styled.section`
+  margin-top: 1rem;
+  padding-bottom: 0;
+
+  .search-form {
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 40rem;
+    /* background: var(--clr-white); */
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+  }
+
+  .form-control {
+    label {
+      display: block;
+      margin-bottom: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.25rem;
+      color: var(--clr-primary-5);
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      border-color: var(--clr-primary-5);
+      /* background: var(--mainBackground); */
+      border-radius: var(--radius);
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+`;
 
 export default function SearchForm() {
   const { setSearchTerm } = useGlobalContext();
@@ -20,7 +54,7 @@ export default function SearchForm() {
   }, []);
 
   return (
-    <StyledSearchForm className="section search">
+    <StyledSearchForm className="section">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">search your favorite cocktail</label>

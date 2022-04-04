@@ -10,11 +10,15 @@ const StyledSearchForm = styled.section`
     width: 85vw;
     margin: 0 auto;
     max-width: 40rem;
-    /* background: var(--clr-white); */
     padding: 2rem 2.5rem;
     text-transform: capitalize;
     border-radius: var(--radius);
-    box-shadow: var(--light-shadow);
+    background: ${(props) =>
+      props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-2)"};
+    box-shadow: ${(props) =>
+      props.theme.name === "light"
+        ? "var(--light-shadow)"
+        : "var(--lw-shadow)"};
   }
 
   .form-control {

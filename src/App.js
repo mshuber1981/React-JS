@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -20,7 +21,9 @@ import ToDo from "./pages/ToDo";
 import Stripe from "./pages/Stripe";
 import Cart from "./pages/Cart";
 import Cocktails from "./pages/Cocktails";
+import SingleCocktail from "./pages/SingleCocktail";
 import Error from "./pages/Error";
+import { closeSideBar, selectIsSideBarOpen } from "./appSlice";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -38,8 +41,9 @@ const themes = {
 };
 
 export default function App() {
-  const { isSidebarOpen, closeSidebar, theme, setDark, setLight } =
-    useGlobalContext();
+  const dispatch = useDispatch();
+  const isSideBarOpen = useSelector(selectIsSideBarOpen);
+  const { theme, setDark, setLight } = useGlobalContext();
   // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
   const setDarkTheme = useRef(setDark);
   const setLightTheme = useRef(setLight);
@@ -52,12 +56,13 @@ export default function App() {
   useEffect(
     function () {
       const main = document.querySelector("main");
+      const close = () => dispatch(closeSideBar());
 
-      if (isSidebarOpen) main.addEventListener("click", closeSidebar);
+      if (isSideBarOpen) main.addEventListener("click", close);
 
-      return () => main.removeEventListener("click", closeSidebar);
+      return () => main.removeEventListener("click", close);
     },
-    [isSidebarOpen, closeSidebar]
+    [isSideBarOpen, dispatch]
   );
 
   window
@@ -86,6 +91,7 @@ export default function App() {
           <Route path="/Stripe-Submenus" element={<Stripe />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Cocktails" element={<Cocktails />} />
+          <Route path="/Cocktails/:id" element={<SingleCocktail />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ThemeProvider>

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useGlobalContext } from "../context";
+import { useSelector, useDispatch } from "react-redux";
+import { closeSideBar, selectIsSideBarOpen } from "../appSlice";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 // Data
@@ -114,7 +115,8 @@ const StyledSideBar = styled.aside`
 `;
 
 export default function SideBar() {
-  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const isSideBarOpen = useSelector(selectIsSideBarOpen);
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
   const ul = useRef(null);
 
@@ -135,24 +137,28 @@ export default function SideBar() {
 
   return (
     <StyledSideBar
-      className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+      className={`${isSideBarOpen ? "sidebar show-sidebar" : "sidebar"}`}
     >
       <div className="sidebar-header">
         <FaReact />
-        <button type="button" className="close-btn" onClick={closeSidebar}>
+        <button
+          type="button"
+          className="close-btn"
+          onClick={() => dispatch(closeSideBar())}
+        >
           <FaTimes />
         </button>
       </div>
       <ul className="links" ref={ul}>
         <li>
-          <Link to={"/"} onClick={closeSidebar}>
+          <Link to={"/"} onClick={() => dispatch(closeSideBar())}>
             Home
           </Link>
         </li>
         {projects.map((project) => {
           return (
             <li key={project.id}>
-              <Link to={project.link} onClick={closeSidebar}>
+              <Link to={project.link} onClick={() => dispatch(closeSideBar())}>
                 {project.name}
               </Link>
             </li>

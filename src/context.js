@@ -25,7 +25,6 @@ const initialState = {
 
 const AppProvider = function ({ children }) {
   const [theme, setTheme] = useState("light");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
@@ -44,10 +43,6 @@ const AppProvider = function ({ children }) {
     setTheme((prevState) =>
       prevState === "light" ? setTheme("dark") : setTheme("light")
     );
-
-  const openSidebar = () => setIsSidebarOpen((prevState) => !prevState);
-
-  const closeSidebar = () => setIsSidebarOpen(false);
 
   const openSubmenu = (text, coordinates) => {
     const page = sublinks.find((link) => link.page === text);
@@ -139,12 +134,9 @@ const AppProvider = function ({ children }) {
     <AppContext.Provider
       value={{
         theme,
-        isSidebarOpen,
         setLight,
         setDark,
         toggleTheme,
-        openSidebar,
-        closeSidebar,
         isSubmenuOpen,
         openSubmenu,
         closeSubmenu,

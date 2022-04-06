@@ -4,7 +4,39 @@ import styled from "styled-components";
 // Components
 import Loading from "../components/Cocktails/Loading";
 
-const StyledSingleCocktail = styled.main``;
+const StyledSingleCocktail = styled.main`
+  .btn,
+  .btn-primary {
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    color: var(--clr-primary-5);
+    border: 2px solid var(--clr-primary-5);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: transparent;
+    border-radius: var(--radius);
+    display: inline-block;
+
+    &:hover {
+      background: var(--clr-primary-5);
+      color: var(--clr-white);
+    }
+  }
+
+  .btn-primary {
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+    border-color: transparent;
+
+    &:hover {
+      background: var(--clr-primary-8);
+      color: var(--clr-primary-5);
+    }
+  }
+`;
 
 export default function SingleCocktail() {
   const { id } = useParams();

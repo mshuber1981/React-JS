@@ -1,4 +1,5 @@
-import { useGlobalContext } from "../../context";
+// Context
+import { useStripeContext } from "./stripeContext";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 // Icons
@@ -92,7 +93,7 @@ const StyledNavbar = styled.nav`
 `;
 
 export default function Navbar() {
-  const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
+  const { openSidebar, openSubmenu, closeSubmenu } = useStripeContext();
 
   function displaySubmenu(e) {
     const page = e.target.textContent;

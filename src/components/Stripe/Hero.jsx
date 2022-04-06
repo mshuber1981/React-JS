@@ -1,4 +1,5 @@
-import { useGlobalContext } from "../../context";
+// Context
+import { useStripeContext } from "./stripeContext";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 // Media
@@ -126,7 +127,7 @@ const StyledHero = styled.main`
 `;
 
 export default function Hero() {
-  const { closeSubmenu } = useGlobalContext();
+  const { closeSubmenu } = useStripeContext();
 
   return (
     <StyledHero className="hero" onMouseOver={closeSubmenu}>

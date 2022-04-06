@@ -1,4 +1,5 @@
-import { useGlobalContext } from "../../context";
+// Context
+import { useStripeContext } from "./stripeContext";
 import styled from "styled-components";
 // Data
 import { sublinks } from "../../data";
@@ -70,7 +71,7 @@ const StyledSidebar = styled.div`
 `;
 
 export default function Sidebar() {
-  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const { isSidebarOpen, closeSidebar } = useStripeContext();
 
   return (
     <StyledSidebar

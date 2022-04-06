@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { useGlobalContext } from "../../context";
+// Context
+import { useStripeContext } from "./stripeContext";
 import styled from "styled-components";
 
 const StyledSubmenu = styled.aside`
@@ -74,7 +75,7 @@ export default function Submenu() {
     isSubmenuOpen,
     page: { page, links },
     location,
-  } = useGlobalContext();
+  } = useStripeContext();
 
   useEffect(
     function () {

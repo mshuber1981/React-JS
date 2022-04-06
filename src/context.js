@@ -7,7 +7,7 @@ import {
   useCallback,
 } from "react";
 // Data
-import { sublinks, cartItems } from "./data";
+import { cartItems } from "./data";
 // Reducers
 import cartReducer from "./components/Cart/cartReducer";
 
@@ -25,9 +25,6 @@ const initialState = {
 
 const AppProvider = function ({ children }) {
   const [theme, setTheme] = useState("light");
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-  const [page, setPage] = useState({ page: "", links: [] });
-  const [location, setLocation] = useState({});
   // Cart
   const [state, dispatch] = useReducer(cartReducer, initialState);
   // Cocktails
@@ -43,17 +40,6 @@ const AppProvider = function ({ children }) {
     setTheme((prevState) =>
       prevState === "light" ? setTheme("dark") : setTheme("light")
     );
-
-  const openSubmenu = (text, coordinates) => {
-    const page = sublinks.find((link) => link.page === text);
-    setPage(page);
-    setLocation(coordinates);
-    setIsSubmenuOpen(true);
-  };
-
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
-  };
 
   // Cart
   const clearCart = () => {
@@ -137,11 +123,6 @@ const AppProvider = function ({ children }) {
         setLight,
         setDark,
         toggleTheme,
-        isSubmenuOpen,
-        openSubmenu,
-        closeSubmenu,
-        page,
-        location,
         // Cart
         ...state,
         clearCart,

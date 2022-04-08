@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useGlobalContext } from "./context";
 import { HashRouter, Routes, Route } from "react-router-dom";
@@ -43,14 +43,11 @@ const themes = {
 export default function App() {
   const dispatch = useDispatch();
   const isSideBarOpen = useSelector(selectIsSideBarOpen);
-  const { theme, setDark, setLight } = useGlobalContext();
-  // https://stackoverflow.com/questions/56240067/accessing-context-from-useeffect
-  const setDarkTheme = useRef(setDark);
-  const setLightTheme = useRef(setLight);
+  const { theme, setTheme } = useGlobalContext();
 
   useEffect(
-    () => (darkMode ? setDarkTheme.current() : setLightTheme.current()),
-    []
+    () => (darkMode ? setTheme("dark") : setTheme("light")),
+    [setTheme]
   );
 
   useEffect(
@@ -68,7 +65,7 @@ export default function App() {
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) =>
-      e.matches ? setDarkTheme.current() : setLightTheme.current()
+      e.matches ? setTheme("dark") : setTheme("light")
     );
 
   return (

@@ -1,4 +1,5 @@
-import { useGlobalContext } from "../context";
+// Context
+import { useCartContext } from "../components/Cart/cartContext";
 // Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -6,7 +7,7 @@ import CartNavBar from "../components/Cart/CartNavBar";
 import CartContainer from "../components/Cart/CartContainer";
 
 export default function Cart() {
-  const { loading } = useGlobalContext();
+  const { loading } = useCartContext();
 
   if (loading) {
     return (

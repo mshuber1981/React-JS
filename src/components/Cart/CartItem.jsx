@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../context";
+import { useCartContext } from "./cartContext";
 import styled from "styled-components";
 
 const StyledCartItem = styled.article`
@@ -63,7 +63,7 @@ const StyledCartItem = styled.article`
 `;
 
 export default function CartItem({ id, img, title, price, amount }) {
-  const { remove, toggleAmount } = useGlobalContext();
+  const { remove, toggleAmount } = useCartContext();
 
   return (
     <StyledCartItem className="cart-item">

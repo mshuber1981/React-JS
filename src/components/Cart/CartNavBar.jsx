@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../context";
+import { useCartContext } from "./cartContext";
 import styled from "styled-components";
 
 const StyledCartNavBar = styled.nav`
@@ -51,7 +51,7 @@ const StyledCartNavBar = styled.nav`
 `;
 
 export default function CartNavBar() {
-  const { amount } = useGlobalContext();
+  const { amount } = useCartContext();
 
   return (
     <StyledCartNavBar>

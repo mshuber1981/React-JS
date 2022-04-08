@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../context";
+import { useCartContext } from "./cartContext";
 import styled from "styled-components";
 // Components
 import CartItem from "./CartItem";
@@ -45,7 +45,7 @@ const StyledCartContainer = styled.section`
 `;
 
 export default function CartContainer() {
-  const { cart, total, clearCart } = useGlobalContext();
+  const { cart, total, clearCart } = useCartContext();
 
   if (cart.length === 0) {
     return (

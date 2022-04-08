@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// Context
+import { AppProvider } from "./context";
+import { CartProvider } from "./components/Cart/cartContext";
 import { store } from "./store";
 import { Provider } from "react-redux";
-// https://reactjs.org/docs/context.html
-import { AppProvider } from "./context";
 import "./index.css";
 import App from "./App";
 
@@ -11,7 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <AppProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </AppProvider>
     </Provider>
   </React.StrictMode>,

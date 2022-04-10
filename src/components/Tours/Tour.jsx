@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledTour = styled.article`
@@ -78,7 +78,8 @@ const StyledTour = styled.article`
 `;
 
 export default function Tour({ id, image, info, name, price, removeTour }) {
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = React.useState(false);
+
   return (
     <StyledTour>
       <img src={image} alt={name} />

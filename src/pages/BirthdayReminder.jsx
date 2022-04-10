@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 // Data
 import { people } from "../data";
 // Components
+import { InnerButton, Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import { Title, InnerButton } from "../components/styledComponents";
 
 const StyledBirthdayReminder = styled.main`
   text-align: center;
@@ -66,12 +66,12 @@ const StyledBirthdayReminder = styled.main`
 `;
 
 export default function BirthdayReminder() {
-  const [peoples, setPeople] = useState(people);
+  const [peopleList, setPeople] = React.useState(people);
 
   function removeItem(id) {
-    let newPeoples = peoples.filter((person) => person.id !== id);
+    let newPeopleList = peopleList.filter((person) => person.id !== id);
 
-    setPeople(newPeoples);
+    setPeople(newPeopleList);
   }
 
   return (
@@ -85,9 +85,8 @@ export default function BirthdayReminder() {
             <div className="underline"></div>
           </Title>
           <div className="container">
-            <h3>{peoples.length} birthdays today</h3>
-            {peoples.map(function (person) {
-              const { id, name, age, image } = person;
+            <h3>{peopleList.length} birthdays today</h3>
+            {peopleList.map(function ({ id, name, age, image }) {
               return (
                 <article key={id} className="person">
                   <img src={image} alt={name} />
@@ -101,7 +100,14 @@ export default function BirthdayReminder() {
                 </article>
               );
             })}
-            <InnerButton onClick={() => setPeople([])}>clear all</InnerButton>
+            {peopleList.length >= 1 && (
+              <InnerButton onClick={() => setPeople([])}>clear all</InnerButton>
+            )}
+            {peopleList.length === 0 && (
+              <InnerButton onClick={() => setPeople([...people])}>
+                refresh list
+              </InnerButton>
+            )}
           </div>
         </section>
       </StyledBirthdayReminder>

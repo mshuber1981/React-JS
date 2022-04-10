@@ -25,6 +25,7 @@ export const Title = styled.div`
   display: inline-block;
   .underline {
     height: 0.25rem;
+    width: 75%;
     background: var(--clr-primary-5);
     margin: 0.5rem auto;
   }

@@ -1,10 +1,11 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import { useGlobalContext } from "./context";
+import { useSelector, useDispatch } from "react-redux";
+import { closeSideBar, selectIsSideBarOpen } from "./appSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+// Components
 import GlobalStyles from "./components/GlobalStyles";
-// https://v5.reactrouter.com/web/guides/scroll-restoration
 import ScrollToTop from "./components/ScrollToTop";
 // Pages
 import Home from "./pages/Home";
@@ -23,7 +24,6 @@ import Cart from "./pages/Cart";
 import Cocktails from "./pages/Cocktails";
 import SingleCocktail from "./pages/SingleCocktail";
 import Error from "./pages/Error";
-import { closeSideBar, selectIsSideBarOpen } from "./appSlice";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -45,12 +45,12 @@ export default function App() {
   const isSideBarOpen = useSelector(selectIsSideBarOpen);
   const { theme, setTheme } = useGlobalContext();
 
-  useEffect(
+  React.useEffect(
     () => (darkMode ? setTheme("dark") : setTheme("light")),
     [setTheme]
   );
 
-  useEffect(
+  React.useEffect(
     function () {
       const main = document.querySelector("main");
       const close = () => dispatch(closeSideBar());

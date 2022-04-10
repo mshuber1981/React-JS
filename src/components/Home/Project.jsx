@@ -63,6 +63,10 @@ const StyledProject = styled.article`
   .project-details {
     padding: 2rem 1.5rem;
 
+    p {
+      overflow-y: auto;
+    }
+
     .project-footer {
       font-size: 1.25rem;
       display: grid;

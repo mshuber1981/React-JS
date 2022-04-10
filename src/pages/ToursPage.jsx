@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 // Components
+import { Loading } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import { Loading } from "../components/styledComponents";
 import Tours from "../components/Tours/Tours";
 
-const StyledToursPage = styled.div`
+const StyledToursErrorPage = styled.div`
   text-align: center;
 `;
 
@@ -14,9 +14,9 @@ const StyledToursPage = styled.div`
 const url = "https://mshuber1981.github.io/React-JS/tours.json";
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [tours, setTours] = useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState("");
+  const [tours, setTours] = React.useState([]);
 
   function removeTour(id) {
     const newTours = tours.filter((tour) => tour.id !== id);
@@ -29,11 +29,14 @@ export default function App() {
     try {
       const response = await fetch(url).then(function (res) {
         if (!res.ok) {
-          throw Error(res.status);
+          throw new Error(res.status);
+        } else if (!url) {
+          throw new Error("The fetch url is empty...");
         }
         return res;
       });
       const tours = await response.json();
+
       setLoading(false);
       setTours(tours);
     } catch (error) {
@@ -44,7 +47,7 @@ export default function App() {
     }
   };
 
-  useEffect(() => fetchTours(), []);
+  React.useEffect(() => fetchTours(), []);
 
   if (loading) {
     return (
@@ -64,10 +67,10 @@ export default function App() {
         <NavBar />
         <SideBar />
         <main>
-          <StyledToursPage>
+          <StyledToursErrorPage>
             <h2>{error}</h2>
             <p>Check fetch url: {url}</p>
-          </StyledToursPage>
+          </StyledToursErrorPage>
         </main>
       </>
     );

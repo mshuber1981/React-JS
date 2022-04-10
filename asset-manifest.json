@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.7d40bf6a.css",
-    "main.js": "/React-JS/static/js/main.32960481.js",
-    "static/media/Tours.PNG": "/React-JS/static/media/Tours.3b96756a245b8804bf8a.PNG",
+    "main.js": "/React-JS/static/js/main.c9e60fe5.js",
+    "static/media/Tours.PNG": "/React-JS/static/media/Tours.3bca03ce4ffc5279f159.PNG",
     "static/media/Stripe.PNG": "/React-JS/static/media/Stripe.2480ad32b8618c13eebb.PNG",
     "static/media/Menu.PNG": "/React-JS/static/media/Menu.a1080b0662f3e105f5eb.PNG",
     "static/media/phone.svg": "/React-JS/static/media/phone.94a7a4fe1f82aed65bc22c10a1c6d6ef.svg",
-    "static/media/BirthdayReminder.PNG": "/React-JS/static/media/BirthdayReminder.db6a4484a08d48b0504c.PNG",
     "static/media/item-7.jpeg": "/React-JS/static/media/item-7.2b2d85320c08729e6a58.jpeg",
     "static/media/Reviews.PNG": "/React-JS/static/media/Reviews.05130110d08a5ba68b2e.PNG",
     "static/media/item-2.jpeg": "/React-JS/static/media/item-2.f0b6b25efcbd39c641cb.jpeg",
@@ -15,6 +14,7 @@
     "static/media/item-4.jpeg": "/React-JS/static/media/item-4.1246e0c14d2695db1ae5.jpeg",
     "static/media/item-1.jpeg": "/React-JS/static/media/item-1.59f884831772e6397275.jpeg",
     "static/media/item-6.jpeg": "/React-JS/static/media/item-6.71751fefb2ee55699e44.jpeg",
+    "static/media/BirthdayReminder.PNG": "/React-JS/static/media/BirthdayReminder.e7c35ec3f6655c388ee9.PNG",
     "static/media/item-3.jpeg": "/React-JS/static/media/item-3.41dbf97f88e1e73a7474.jpeg",
     "static/media/item-5.jpeg": "/React-JS/static/media/item-5.39ce038c4ceb093d7c66.jpeg",
     "static/media/item-9.jpeg": "/React-JS/static/media/item-9.46d925888a7d2fa971d6.jpeg",
@@ -28,10 +28,10 @@
     "static/media/hero.svg": "/React-JS/static/media/hero.acf1e00e9c9a661a4b0af9b26d5af432.svg",
     "index.html": "/React-JS/index.html",
     "main.7d40bf6a.css.map": "/React-JS/static/css/main.7d40bf6a.css.map",
-    "main.32960481.js.map": "/React-JS/static/js/main.32960481.js.map"
+    "main.c9e60fe5.js.map": "/React-JS/static/js/main.c9e60fe5.js.map"
   },
   "entrypoints": [
     "static/css/main.7d40bf6a.css",
-    "static/js/main.32960481.js"
+    "static/js/main.c9e60fe5.js"
   ]
 }

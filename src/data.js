@@ -1,5 +1,4 @@
-// Media/icons
-import React from "react";
+// Icons
 import {
   FaLinkedin,
   FaGithub,
@@ -39,7 +38,7 @@ export const projects = [
     image: BirthdayReminder,
     link: "/Birthday-Reminder",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+      "The first project. A simple example of the useState hook and conditional redering in action.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/BirthdayReminder.jsx",
   },
@@ -49,7 +48,7 @@ export const projects = [
     image: Tours,
     link: "/Tours",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+      "Project number two. Similar to the Birthday Reminders project, but including a slightly more complex data fetching example.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
   },

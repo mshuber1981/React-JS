@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { InnerButton } from "../styledComponents";
 
 const StyledCategories = styled.div`
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

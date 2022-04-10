@@ -20,11 +20,11 @@ export default function Reviews() {
       <NavBar />
       <SideBar />
       <StyledReviews>
+        <Title>
+          <h2>Reviews</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="section section-center container">
-          <Title>
-            <h2>Reviews</h2>
-            <div className="underline"></div>
-          </Title>
           <Review />
         </section>
       </StyledReviews>

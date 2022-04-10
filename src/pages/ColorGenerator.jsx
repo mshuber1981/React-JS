@@ -10,8 +10,6 @@ import SingleColor from "../components/Color-Generator/SingleColor";
 
 const StyledColorGenerator = styled.main`
   .container {
-    margin-top: 5rem;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,11 +133,11 @@ export default function ColorGenerator() {
       <NavBar />
       <SideBar />
       <StyledColorGenerator>
+        <Title>
+          <h2>Color Generator</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="container">
-          <Title>
-            <h2>Color Generator</h2>
-            <div className="underline"></div>
-          </Title>
           <form onSubmit={handleSubmit}>
             <input
               type="text"

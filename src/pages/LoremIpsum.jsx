@@ -8,8 +8,6 @@ import SideBar from "../components/SideBar";
 import { InnerButton, Title } from "../components/styledComponents";
 
 const StyledLoremIpsum = styled.main`
-  text-align: center;
-
   .lorem-form {
     text-transform: capitalize;
     letter-spacing: var(--spacing);
@@ -34,7 +32,6 @@ const StyledLoremIpsum = styled.main`
   }
 
   .lorem-text {
-    text-align: left;
     text-indent: 1rem;
   }
 `;
@@ -58,12 +55,11 @@ export default function LoremIpsum() {
       <NavBar />
       <SideBar />
       <StyledLoremIpsum>
+        <Title>
+          <h2>Lorem Ipsum</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="section section-center">
-          <Title>
-            <h2>Lorem Ipsum</h2>
-            <div className="underline"></div>
-          </Title>
-
           <form className="lorem-form" onSubmit={handleSubmit}>
             <label htmlFor="amount">Paragraphs:</label>
             <input

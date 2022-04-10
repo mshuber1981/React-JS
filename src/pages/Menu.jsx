@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styled from "styled-components";
 // Data
 import { items } from "../data";
 // Components
@@ -8,10 +7,6 @@ import SideBar from "../components/SideBar";
 import { Title } from "../components/styledComponents";
 import Categories from "../components/Menu/Categories";
 import MenuItems from "../components/Menu/MenuItems";
-
-const StyledMenu = styled.main`
-  text-align: center;
-`;
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -32,16 +27,16 @@ export default function Menu() {
     <>
       <NavBar />
       <SideBar />
-      <StyledMenu>
+      <main>
+        <Title>
+          <h2>Our Menu</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="section">
-          <Title>
-            <h2>Our Menu</h2>
-            <div className="underline"></div>
-          </Title>
           <Categories categories={allCategories} filterItems={filterItems} />
           <MenuItems items={menuItems} />
         </section>
-      </StyledMenu>
+      </main>
     </>
   );
 }

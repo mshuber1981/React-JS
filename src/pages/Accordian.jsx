@@ -8,7 +8,6 @@ import { Title } from "../components/styledComponents";
 import Question from "../components/Accordian/Question";
 
 const StyledAccordian = styled.main`
-  text-align: center;
   .container {
     width: 90vw;
     margin-top: 2rem;
@@ -49,11 +48,11 @@ export default function Accordian() {
       <NavBar />
       <SideBar />
       <StyledAccordian>
+        <Title>
+          <h2>Accordian</h2>
+          <div className="underline" />
+        </Title>
         <section className="section">
-          <Title>
-            <h2>Accordian</h2>
-            <div className="underline" />
-          </Title>
           <div className="container">
             <h3>Questions and answers about login</h3>
             <div>

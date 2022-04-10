@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 
 const StyledBirthdayReminder = styled.main`
-  text-align: center;
+  /* text-align: center; */
 
   .container {
     text-align: left;
@@ -79,11 +79,11 @@ export default function BirthdayReminder() {
       <NavBar />
       <SideBar />
       <StyledBirthdayReminder>
+        <Title>
+          <h2>Birthday Reminders</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="section section-center">
-          <Title>
-            <h2>Birthday Reminders</h2>
-            <div className="underline"></div>
-          </Title>
           <div className="container">
             <h3>{peopleList.length} birthdays today</h3>
             {peopleList.map(function ({ id, name, age, image }) {

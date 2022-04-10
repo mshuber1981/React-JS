@@ -11,12 +11,10 @@ import { Loading, Title } from "../components/styledComponents";
 const url = "https://mshuber1981.github.io/React-JS/tabs.json";
 
 const StyledTabs = styled.main`
-  text-align: center;
   .jobs-center {
     width: 80vw;
     margin: 0 auto;
     max-width: var(--max-width);
-    text-align: left;
     margin-top: 4rem;
 
     .btn-container {
@@ -185,11 +183,11 @@ export default function Tabs() {
       <NavBar />
       <SideBar />
       <StyledTabs>
+        <Title>
+          <h2>Tabs</h2>
+          <div className="underline"></div>
+        </Title>
         <section className="section">
-          <Title>
-            <h2>Tabs</h2>
-            <div className="underline"></div>
-          </Title>
           <div className="jobs-center">
             {/* btn container */}
             <div className="btn-container">

@@ -25,11 +25,11 @@ export default function Home() {
       <NavBar />
       <SideBar />
       <StyledHome>
+        <Title>
+          <h1>React Projects</h1>
+          <div className="underline"></div>
+        </Title>
         <section className="section">
-          <Title>
-            <h1>React Projects</h1>
-            <div className="underline"></div>
-          </Title>
           <div className="section-center projects-page-center">
             {projects.map((project) => (
               <Project key={project.id} {...project} />

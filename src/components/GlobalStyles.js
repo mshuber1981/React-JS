@@ -141,7 +141,7 @@ img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 0 0 5rem;
 }
 
 .section-center {

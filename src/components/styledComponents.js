@@ -23,6 +23,8 @@ export const bounce = keyframes`
 // Titles
 export const Title = styled.div`
   display: inline-block;
+  margin: 5rem 0 2.5rem;
+
   .underline {
     height: 0.25rem;
     width: 75%;

@@ -86,7 +86,6 @@ const StyledSlider = styled.main`
       .title {
         text-transform: capitalize;
         margin-bottom: 0.75rem;
-        /* color: var(--clr-grey-3); */
       }
 
       .text {

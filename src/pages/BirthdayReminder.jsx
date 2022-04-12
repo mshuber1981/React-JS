@@ -8,8 +8,6 @@ import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 
 const StyledBirthdayReminder = styled.main`
-  /* text-align: center; */
-
   .container {
     text-align: left;
     width: 90vw;

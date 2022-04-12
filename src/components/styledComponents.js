@@ -23,13 +23,13 @@ export const bounce = keyframes`
 // Titles
 export const Title = styled.div`
   display: inline-block;
-  margin: 5rem 0 2.5rem;
+  margin-top: 0.75rem;
 
   .underline {
     height: 0.25rem;
     width: 75%;
     background: var(--clr-primary-5);
-    margin: 0.5rem auto;
+    margin: 0.5rem auto 0;
   }
 `;
 

@@ -10,10 +10,14 @@ import Project from "../components/Home/Project";
 const StyledHome = styled.main`
   text-align: center;
 
+  section {
+    padding-top: 0;
+  }
+
   .projects-page-center {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 3rem 3rem;
+    gap: 2rem 2rem;
     text-align: left;
     margin-top: 2rem;
   }

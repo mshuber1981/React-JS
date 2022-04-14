@@ -8,7 +8,8 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { InnerButton } from "../styledComponents";
 
 const StyledReview = styled.article`
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  text-align: center;
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
   border: 0.15rem solid var(--clr-primary-5);

@@ -10,7 +10,6 @@ import Question from "../components/Accordian/Question";
 const StyledAccordian = styled.main`
   .container {
     width: 90vw;
-    margin-top: 2rem;
     border-radius: var(--radius);
     border: 0.15rem solid var(--clr-primary-5);
     padding: 2.5rem 2rem;

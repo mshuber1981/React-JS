@@ -9,7 +9,7 @@ export default function Tours({ tours, removeTour }) {
         <h2>Tours</h2>
         <div className="underline"></div>
       </Title>
-      <section className="section section-center">
+      <section className="section-center">
         {tours.map((tour) => (
           <Tour key={tour.id} {...tour} removeTour={removeTour} />
         ))}

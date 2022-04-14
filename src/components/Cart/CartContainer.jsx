@@ -4,6 +4,8 @@ import styled from "styled-components";
 import CartItem from "./CartItem";
 
 const StyledCartContainer = styled.section`
+  margin-top: 3rem;
+
   h2 {
     text-transform: uppercase;
     text-align: center;

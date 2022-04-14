@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledTour = styled.article`
-  margin: 2rem 0;
+  margin: 3rem 0;
   border-radius: var(--radius);
   border: 0.15rem solid var(--clr-primary-5);
   transition: var(--transition);

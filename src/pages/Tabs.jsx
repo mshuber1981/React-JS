@@ -15,7 +15,7 @@ const StyledTabs = styled.main`
     width: 80vw;
     margin: 0 auto;
     max-width: var(--max-width);
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 
     .btn-container {
       display: flex;

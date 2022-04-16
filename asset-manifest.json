@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.7d40bf6a.css",
-    "main.js": "/React-JS/static/js/main.c9e60fe5.js",
+    "main.js": "/React-JS/static/js/main.8119e236.js",
     "static/media/Tours.PNG": "/React-JS/static/media/Tours.3bca03ce4ffc5279f159.PNG",
     "static/media/Stripe.PNG": "/React-JS/static/media/Stripe.2480ad32b8618c13eebb.PNG",
+    "static/media/Cocktails.PNG": "/React-JS/static/media/Cocktails.fcc9cdba835b0539a781.PNG",
     "static/media/Menu.PNG": "/React-JS/static/media/Menu.a1080b0662f3e105f5eb.PNG",
     "static/media/phone.svg": "/React-JS/static/media/phone.94a7a4fe1f82aed65bc22c10a1c6d6ef.svg",
     "static/media/item-7.jpeg": "/React-JS/static/media/item-7.2b2d85320c08729e6a58.jpeg",
@@ -28,10 +29,10 @@
     "static/media/hero.svg": "/React-JS/static/media/hero.acf1e00e9c9a661a4b0af9b26d5af432.svg",
     "index.html": "/React-JS/index.html",
     "main.7d40bf6a.css.map": "/React-JS/static/css/main.7d40bf6a.css.map",
-    "main.c9e60fe5.js.map": "/React-JS/static/js/main.c9e60fe5.js.map"
+    "main.8119e236.js.map": "/React-JS/static/js/main.8119e236.js.map"
   },
   "entrypoints": [
     "static/css/main.7d40bf6a.css",
-    "static/js/main.c9e60fe5.js"
+    "static/js/main.8119e236.js"
   ]
 }

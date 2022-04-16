@@ -19,6 +19,7 @@ import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
 import Stripe from "./media/cards/Stripe.PNG";
 import Cart from "./media/cards/Cart.PNG";
+import Cocktails from "./media/cards/Cocktails.PNG";
 // Menu media
 import MenuItem1 from "./media/menu/item-1.jpeg";
 import MenuItem2 from "./media/menu/item-2.jpeg";
@@ -155,7 +156,7 @@ export const projects = [
   {
     id: 13,
     name: "Cocktails",
-    image: Cart,
+    image: Cocktails,
     link: "/Cocktails",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",

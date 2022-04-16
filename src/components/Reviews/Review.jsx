@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 // Data
 import { reviews } from "../../data";
@@ -8,7 +8,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { InnerButton } from "../styledComponents";
 
 const StyledReview = styled.article`
-  /* margin-top: 1rem; */
   text-align: center;
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
@@ -89,7 +88,7 @@ const StyledReview = styled.article`
 `;
 
 export default function Review() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = React.useState(0);
   const { name, job, image, text } = reviews[index];
 
   function checkNumber(number) {

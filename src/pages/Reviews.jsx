@@ -6,8 +6,6 @@ import { Title } from "../components/styledComponents";
 import Review from "../components/Reviews/Review";
 
 const StyledReviews = styled.main`
-  /* text-align: center; */
-
   .container {
     width: 80vw;
     max-width: var(--fixed-width);

@@ -60,10 +60,6 @@ const StyledReview = styled.article`
   }
   .info {
     margin-bottom: 0.75rem;
-    color: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-1)"
-        : "var(--clr-grey-10)"};
   }
 
   .prev-btn,

@@ -5,6 +5,10 @@ import styled from "styled-components";
 import Loading from "../components/Cocktails/Loading";
 
 const StyledSingleCocktail = styled.main`
+  min-height: 100vh;
+  background: ${({ theme }) =>
+    theme.name === "light" ? "var(--clr-grey-8)" : ""};
+
   .btn,
   .btn-primary {
     text-transform: uppercase;
@@ -39,8 +43,8 @@ const StyledSingleCocktail = styled.main`
 
   .drink {
     border-radius: var(--radius);
-    background: ${(props) =>
-      props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-2)"};
+    background: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-5)"};
 
     img {
       border-radius: var(--radius);

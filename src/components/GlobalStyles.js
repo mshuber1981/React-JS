@@ -67,8 +67,8 @@ Global Styles
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: ${(props) => props.theme.background};
-  color: ${(props) => props.theme.color};
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -108,7 +108,6 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
 }
 
 @media screen and (min-width: 800px) {

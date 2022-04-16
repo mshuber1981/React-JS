@@ -27,6 +27,8 @@ const StyledColorGenerator = styled.main`
       border-top-left-radius: var(--radius);
       border-bottom-left-radius: var(--radius);
       max-width: 60vw;
+      background: ${({ theme }) =>
+        theme.name === "light" ? "var(--clr-grey-9)" : ""};
     }
 
     .input.error {

@@ -44,6 +44,7 @@ const StyledCartNavBar = styled.nav`
         .total-amount {
           margin-bottom: 0;
           font-size: 1.25rem;
+          color: var(--clr-black);
         }
       }
     }

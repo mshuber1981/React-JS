@@ -93,7 +93,6 @@ const StyledSlider = styled.main`
         margin: 0 auto;
         margin-top: 2rem;
         line-height: 2;
-        color: var(--clr-grey-5);
       }
 
       .icon {

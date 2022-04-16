@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../../context";
 // Components
-import Cocktail from "./Cocktail";
 import Loading from "./Loading";
+import Cocktail from "./Cocktail";
 
 export default function CocktailList() {
   const { cocktails, loading } = useGlobalContext();
@@ -19,7 +19,6 @@ export default function CocktailList() {
   }
   return (
     <section className="section">
-      <h2 className="section-title">cocktails</h2>
       <div className="cocktails-center">
         {cocktails.map((item) => {
           return <Cocktail key={item.id} {...item} />;

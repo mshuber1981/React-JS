@@ -36,6 +36,43 @@ const StyledSingleCocktail = styled.main`
       color: var(--clr-primary-5);
     }
   }
+
+  .drink {
+    border-radius: var(--radius);
+    background: ${(props) =>
+      props.theme.name === "light" ? "var(--clr-grey-8)" : "var(--clr-grey-2)"};
+
+    img {
+      border-radius: var(--radius);
+    }
+
+    .drink-info {
+      padding: 1rem;
+
+      p {
+        font-weight: bold;
+        text-transform: capitalize;
+        line-height: 1.8;
+      }
+
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .drink {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+      align-items: center;
+
+      .drink-info {
+        padding-top: 0;
+      }
+    }
+  }
 `;
 
 export default function SingleCocktail() {
@@ -117,7 +154,7 @@ export default function SingleCocktail() {
 
     return (
       <StyledSingleCocktail>
-        <section className="section cocktail-section">
+        <section className="section section-center">
           <Link to="/Cocktails" className="btn btn-primary">
             Back to search
           </Link>

@@ -58,7 +58,7 @@ export const projects = [
     image: Reviews,
     link: "/Reviews",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+      "A simple, manual, array based carousel component. There is only one element, so the buttons only update the state versus cycling through different elements with some kind of animation.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Reviews.jsx",
   },

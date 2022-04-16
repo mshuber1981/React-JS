@@ -12,6 +12,7 @@ const AppContext = createContext();
 
 const AppProvider = function ({ children }) {
   const [theme, setTheme] = useState("light");
+  // Cocktails
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("a");
   const [cocktails, setCocktails] = useState([]);

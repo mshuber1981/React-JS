@@ -48,7 +48,7 @@ export default function SearchForm() {
   useEffect(() => {
     searchValue.current.focus();
     setSearchTerm("a");
-  }, []);
+  }, [setSearchTerm]);
 
   return (
     <StyledSearchForm onSubmit={handleSubmit}>

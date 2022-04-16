@@ -47,6 +47,7 @@ export default function SearchForm() {
 
   useEffect(() => {
     searchValue.current.focus();
+    setSearchTerm("a");
   }, []);
 
   return (

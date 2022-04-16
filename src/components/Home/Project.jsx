@@ -8,9 +8,11 @@ import { FaGithub } from "react-icons/fa";
 import { bounce } from "../styledComponents";
 
 const StyledProject = styled.article`
+  display: grid;
   border-radius: var(--radius);
   border: 0.15rem solid var(--clr-primary-5);
   max-width: 90vw;
+  height: 30rem;
   transition: var(--transition);
   box-shadow: ${(props) =>
     props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
@@ -28,7 +30,7 @@ const StyledProject = styled.article`
     position: relative;
 
     img {
-      height: 16rem;
+      height: 15rem;
       object-fit: cover;
       border-top-left-radius: var(--radius);
       border-top-right-radius: var(--radius);
@@ -61,9 +63,17 @@ const StyledProject = styled.article`
   }
 
   .project-details {
-    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 15rem;
+    padding: 1.5rem 1.5rem;
 
-    p {
+    h4 {
+      align-self: center;
+      margin-bottom: 0;
+    }
+
+    .text-container {
       overflow-y: auto;
     }
 
@@ -109,7 +119,9 @@ export default function Project({ name, image, link, description, github }) {
       </div>
       <div className="project-details">
         <h4>{name}</h4>
-        <p>{description}</p>
+        <div className="text-container">
+          <p>{description}</p>
+        </div>
         <div className="project-footer">
           <FaGithub />
           <a href={github} title="GitHub">

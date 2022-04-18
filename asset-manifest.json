@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-JS/static/css/main.7d40bf6a.css",
-    "main.js": "/React-JS/static/js/main.9c7943e2.js",
+    "main.js": "/React-JS/static/js/main.2825f34f.js",
     "static/media/Tours.PNG": "/React-JS/static/media/Tours.3bca03ce4ffc5279f159.PNG",
     "static/media/Stripe.PNG": "/React-JS/static/media/Stripe.2480ad32b8618c13eebb.PNG",
     "static/media/Cocktails.PNG": "/React-JS/static/media/Cocktails.fcc9cdba835b0539a781.PNG",
@@ -10,7 +10,7 @@
     "static/media/item-7.jpeg": "/React-JS/static/media/item-7.2b2d85320c08729e6a58.jpeg",
     "static/media/Reviews.PNG": "/React-JS/static/media/Reviews.05130110d08a5ba68b2e.PNG",
     "static/media/item-2.jpeg": "/React-JS/static/media/item-2.f0b6b25efcbd39c641cb.jpeg",
-    "static/media/Slider.PNG": "/React-JS/static/media/Slider.a2c1a32d924094b8665c.PNG",
+    "static/media/Carousel.PNG": "/React-JS/static/media/Carousel.a2c1a32d924094b8665c.PNG",
     "static/media/item-8.jpeg": "/React-JS/static/media/item-8.77daac2abe411b747cb4.jpeg",
     "static/media/item-4.jpeg": "/React-JS/static/media/item-4.1246e0c14d2695db1ae5.jpeg",
     "static/media/item-1.jpeg": "/React-JS/static/media/item-1.59f884831772e6397275.jpeg",
@@ -29,10 +29,10 @@
     "static/media/hero.svg": "/React-JS/static/media/hero.acf1e00e9c9a661a4b0af9b26d5af432.svg",
     "index.html": "/React-JS/index.html",
     "main.7d40bf6a.css.map": "/React-JS/static/css/main.7d40bf6a.css.map",
-    "main.9c7943e2.js.map": "/React-JS/static/js/main.9c7943e2.js.map"
+    "main.2825f34f.js.map": "/React-JS/static/js/main.2825f34f.js.map"
   },
   "entrypoints": [
     "static/css/main.7d40bf6a.css",
-    "static/js/main.9c7943e2.js"
+    "static/js/main.2825f34f.js"
   ]
 }

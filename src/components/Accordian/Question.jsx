@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 // Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -6,10 +6,8 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 const StyledQuestion = styled.article`
   padding: 1rem 1.5rem;
   border: 2px solid
-    ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-1)"
-        : "var(--clr-grey-10)"};
+    ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
   margin-bottom: 1rem;
   border-radius: var(--radius);
 
@@ -42,15 +40,15 @@ const StyledQuestion = styled.article`
   }
 
   p {
-    color: ${(props) =>
-      props.theme.name === "light" ? "var(--clr-grey-2)" : "var(--clr-grey-9)"};
+    color: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-2)" : "var(--clr-grey-9)"};
     margin-bottom: 0;
     margin-top: 0.5rem;
   }
 `;
 
 export default function Question({ title, info }) {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = React.useState(false);
 
   return (
     <StyledQuestion>

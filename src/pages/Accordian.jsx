@@ -2,9 +2,9 @@ import styled from "styled-components";
 // Data
 import { questions } from "../data";
 // Components
+import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import { Title } from "../components/styledComponents";
 import Question from "../components/Accordian/Question";
 
 const StyledAccordian = styled.main`
@@ -16,16 +16,12 @@ const StyledAccordian = styled.main`
     max-width: var(--fixed-width);
     display: grid;
     gap: 1rem 2rem;
-    background: ${(props) =>
-      props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
-    color: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-1)"
-        : "var(--clr-grey-10)"};
-    box-shadow: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--light-shadow)"
-        : "var(--lw-shadow)"};
+    background: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
+    color: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
+    box-shadow: ${({ theme }) =>
+      theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
     h3 {
       line-height: 1.2;

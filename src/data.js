@@ -8,12 +8,12 @@ import {
 } from "react-icons/fa";
 // Card media
 import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
-import Tours from "./media/cards/Tours.PNG";
-import Reviews from "./media/cards/Reviews.PNG";
 import Accordian from "./media/cards/Accordian.PNG";
+import Reviews from "./media/cards/Reviews.PNG";
+import Carousel from "./media/cards/Carousel.PNG";
+import Tours from "./media/cards/Tours.PNG";
 import Menu from "./media/cards/Menu.PNG";
 import Tabs from "./media/cards/Tabs.PNG";
-import Slider from "./media/cards/Slider.PNG";
 import Lorem from "./media/cards/Lorem.PNG";
 import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
@@ -45,6 +45,36 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Accordian",
+    image: Accordian,
+    link: "/Accordian",
+    description:
+      "Number two. Another basic state example with conditional rendering. This time we used an inline ternary expresion to display different buttons depending on the state, and a short circuit (logical AND) expression to display or hide text.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Accordian.jsx",
+  },
+  {
+    id: 3,
+    name: "Reviews",
+    image: Reviews,
+    link: "/Reviews",
+    description:
+      "A simple, manual, array based carousel component. There is only one element, so the buttons update the state versus cycling through different elements with some kind of animation.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Reviews.jsx",
+  },
+  {
+    id: 4,
+    name: "Carousel",
+    image: Carousel,
+    link: "/Carousel",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Carousel.jsx",
+  },
+  {
+    id: 5,
     name: "Tours",
     image: Tours,
     link: "/Tours",
@@ -54,27 +84,7 @@ export const projects = [
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
   },
   {
-    id: 3,
-    name: "Reviews",
-    image: Reviews,
-    link: "/Reviews",
-    description:
-      "A simple, manual, array based carousel component. There is only one element, so the buttons only update the state versus cycling through different elements with some kind of animation.",
-    github:
-      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Reviews.jsx",
-  },
-  {
-    id: 4,
-    name: "Accordian",
-    image: Accordian,
-    link: "/Accordian",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
-    github:
-      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Accordian.jsx",
-  },
-  {
-    id: 5,
+    id: 6,
     name: "Menu",
     image: Menu,
     link: "/Menu",
@@ -84,7 +94,7 @@ export const projects = [
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Menu.jsx",
   },
   {
-    id: 6,
+    id: 7,
     name: "Tabs",
     image: Tabs,
     link: "/Tabs",
@@ -92,16 +102,6 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Tabs.jsx",
-  },
-  {
-    id: 7,
-    name: "Slider",
-    image: Slider,
-    link: "/Slider",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
-    github:
-      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Slider.jsx",
   },
   {
     id: 8,
@@ -218,6 +218,35 @@ export const people = [
   },
 ];
 
+// Accordian
+export const questions = [
+  {
+    id: 1,
+    title: "Do I have to allow the use of cookies?",
+    info: "Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.",
+  },
+  {
+    id: 2,
+    title: "How do I change my My Page password?",
+    info: "Coloring book forage photo booth gentrify lumbersexual. Migas chillwave poutine synth shoreditch, enamel pin thundercats fashion axe roof party polaroid chartreuse.",
+  },
+  {
+    id: 3,
+    title: "What is BankID?",
+    info: "Enamel pin fam sustainable woke whatever venmo. Authentic asymmetrical put a bird on it, lumbersexual activated charcoal kinfolk banjo cred pickled sartorial.",
+  },
+  {
+    id: 4,
+    title: "Whose birth number can I use?",
+    info: "Edison bulb direct trade gentrify beard lo-fi seitan sustainable roof party franzen occupy squid. Knausgaard cronut succulents, scenester readymade shabby chic lyft. Copper mug meh vegan gentrify.",
+  },
+  {
+    id: 5,
+    title: "When do I recieve a password ordered by letter?",
+    info: "Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ",
+  },
+];
+
 // Reviews
 export const reviews = [
   {
@@ -251,35 +280,6 @@ export const reviews = [
     image:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
-  },
-];
-
-// Accordian
-export const questions = [
-  {
-    id: 1,
-    title: "Do I have to allow the use of cookies?",
-    info: "Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.",
-  },
-  {
-    id: 2,
-    title: "How do I change my My Page password?",
-    info: "Coloring book forage photo booth gentrify lumbersexual. Migas chillwave poutine synth shoreditch, enamel pin thundercats fashion axe roof party polaroid chartreuse.",
-  },
-  {
-    id: 3,
-    title: "What is BankID?",
-    info: "Enamel pin fam sustainable woke whatever venmo. Authentic asymmetrical put a bird on it, lumbersexual activated charcoal kinfolk banjo cred pickled sartorial.",
-  },
-  {
-    id: 4,
-    title: "Whose birth number can I use?",
-    info: "Edison bulb direct trade gentrify beard lo-fi seitan sustainable roof party franzen occupy squid. Knausgaard cronut succulents, scenester readymade shabby chic lyft. Copper mug meh vegan gentrify.",
-  },
-  {
-    id: 5,
-    title: "When do I recieve a password ordered by letter?",
-    info: "Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ",
   },
 ];
 

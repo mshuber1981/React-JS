@@ -2,18 +2,12 @@ import styled from "styled-components";
 // Data
 import { projects } from "../data";
 // Components
+import { Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import { Title } from "../components/styledComponents";
 import Project from "../components/Home/Project";
 
 const StyledHome = styled.main`
-  text-align: center;
-
-  section {
-    padding-top: 0;
-  }
-
   .projects-page-center {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));

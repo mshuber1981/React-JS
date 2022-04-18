@@ -16,16 +16,12 @@ const StyledBirthdayReminder = styled.main`
     border: 0.15rem solid var(--clr-primary-5);
     border-radius: var(--radius);
     padding: 1.5rem 2rem;
-    box-shadow: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--light-shadow)"
-        : "var(--lw-shadow)"};
-    background: ${(props) =>
-      props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
-    color: ${(props) =>
-      props.theme.name === "light"
-        ? "var(--clr-grey-1)"
-        : "var(--clr-grey-10)"};
+    box-shadow: ${({ theme }) =>
+      theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
+    background: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
+    color: ${({ theme }) =>
+      theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
 
     h3 {
       font-weight: normal;

@@ -1,53 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchTours,
+  selectIsLoading,
+  selectError,
+  selectToursData,
+} from "../components/Tours/toursSlice";
+import { url } from "../components/Tours/toursSlice";
 // Components
-import { Loading } from "../components/styledComponents";
+import { Loading, OuterButton, Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Tours from "../components/Tours/Tours";
 
-const StyledToursErrorPage = styled.div`
-  text-align: center;
-`;
-
-// const url = "https://course-api.com/react-tours-project";
-const url = "https://mshuber1981.github.io/React-JS/tours.json";
-
 export default function App() {
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState("");
-  const [tours, setTours] = React.useState([]);
-
-  function removeTour(id) {
-    const newTours = tours.filter((tour) => tour.id !== id);
-    setTours(newTours);
-  }
-
-  const fetchTours = async function () {
-    setLoading(true);
-    setError("");
-    try {
-      const response = await fetch(url).then(function (res) {
-        if (!res.ok) {
-          throw new Error(res.status);
-        } else if (!url) {
-          throw new Error("The fetch url is empty...");
-        }
-        return res;
-      });
-      const tours = await response.json();
-
-      setLoading(false);
-      setTours(tours);
-    } catch (error) {
-      const errorMessage = `Error: ${error.message}`;
-      setLoading(false);
-      setError(errorMessage);
-      console.log(error);
-    }
-  };
-
-  React.useEffect(() => fetchTours(), []);
+  const loading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+  const tours = useSelector(selectToursData);
+  const dispatch = useDispatch();
 
   if (loading) {
     return (
@@ -67,10 +37,8 @@ export default function App() {
         <NavBar />
         <SideBar />
         <main>
-          <StyledToursErrorPage>
-            <h2>{error}</h2>
-            <p>Check fetch url: {url}</p>
-          </StyledToursErrorPage>
+          <h2>{error}</h2>
+          <p>Check fetch url (toursSlice.js): {url}</p>
         </main>
       </>
     );
@@ -80,7 +48,18 @@ export default function App() {
     <>
       <NavBar />
       <SideBar />
-      <Tours tours={tours} removeTour={removeTour} />
+      <main>
+        <Title>
+          <h2>Tours</h2>
+          <div className="underline"></div>
+        </Title>
+        <Tours />
+        {tours.length === 0 && (
+          <OuterButton onClick={() => dispatch(fetchTours())}>
+            Refresh Tours data
+          </OuterButton>
+        )}
+      </main>
     </>
   );
 }

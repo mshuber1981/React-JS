@@ -2,6 +2,7 @@ import React from "react";
 import { useGlobalContext } from "./context";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar, selectIsSideBarOpen } from "./appSlice";
+import { fetchTours } from "./components/Tours/toursSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 // Components
@@ -15,7 +16,7 @@ import Reviews from "./pages/Reviews";
 import Accordian from "./pages/Accordian";
 import Menu from "./pages/Menu";
 import Tabs from "./pages/Tabs";
-import Slider from "./pages/Slider";
+import Carousel from "./pages/Carousel";
 import LoremIpsum from "./pages/LoremIpsum";
 import ColorGenerator from "./pages/ColorGenerator";
 import ToDo from "./pages/ToDo";
@@ -61,6 +62,8 @@ export default function App() {
     },
     [isSideBarOpen, dispatch]
   );
+  // Tours data
+  React.useEffect(() => dispatch(fetchTours()), [dispatch]);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
@@ -81,7 +84,7 @@ export default function App() {
           <Route path="/Accordian" element={<Accordian />} />
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Tabs" element={<Tabs />} />
-          <Route path="/Slider" element={<Slider />} />
+          <Route path="/Carousel" element={<Carousel />} />
           <Route path="/Lorem-Ipsum" element={<LoremIpsum />} />
           <Route path="/Color-Generator" element={<ColorGenerator />} />
           <Route path="/To-Do" element={<ToDo />} />

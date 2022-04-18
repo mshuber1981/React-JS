@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeTour } from "./toursSlice";
 import styled from "styled-components";
 
 const StyledTour = styled.article`
@@ -6,14 +8,14 @@ const StyledTour = styled.article`
   border-radius: var(--radius);
   border: 0.15rem solid var(--clr-primary-5);
   transition: var(--transition);
-  background: ${(props) =>
-    props.theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
-  box-shadow: ${(props) =>
-    props.theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
+  background: ${({ theme }) =>
+    theme.name === "light" ? "var(--clr-grey-9)" : "var(--clr-grey-1)"};
+  box-shadow: ${({ theme }) =>
+    theme.name === "light" ? "var(--light-shadow)" : "var(--lw-shadow)"};
 
   &:hover {
-    box-shadow: ${(props) =>
-      props.theme.name === "light" ? "var(--dark-shadow)" : "var(--dw-shadow)"};
+    box-shadow: ${({ theme }) =>
+      theme.name === "light" ? "var(--dark-shadow)" : "var(--dw-shadow)"};
   }
 
   img {
@@ -58,18 +60,14 @@ const StyledTour = styled.article`
 
       h4 {
         margin-bottom: 0;
-        color: ${(props) =>
-          props.theme.name === "light"
-            ? "var(--clr-grey-1)"
-            : "var(--clr-grey-10)"};
+        color: ${({ theme }) =>
+          theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-10)"};
       }
 
       .tour-price {
         color: var(--clr-primary-5);
-        background: ${(props) =>
-          props.theme.name === "light"
-            ? "var(--clr-grey-1)"
-            : "var(--clr-grey-9)"};
+        background: ${({ theme }) =>
+          theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-9)"};
         padding: 0.25rem 0.5rem;
         border-radius: var(--radius);
       }
@@ -77,8 +75,9 @@ const StyledTour = styled.article`
   }
 `;
 
-export default function Tour({ id, image, info, name, price, removeTour }) {
+export default function Tour({ id, image, info, name, price }) {
   const [readMore, setReadMore] = React.useState(false);
+  const dispatch = useDispatch();
 
   return (
     <StyledTour>
@@ -94,7 +93,7 @@ export default function Tour({ id, image, info, name, price, removeTour }) {
             {readMore ? "show less" : "read more"}
           </button>
         </p>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
+        <button className="delete-btn" onClick={() => dispatch(removeTour(id))}>
           not interested
         </button>
       </footer>

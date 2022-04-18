@@ -200,7 +200,7 @@ export default function Slider() {
         <section className="section">
           <div className="title">
             <h2>
-              <span>/</span>Slider
+              <span>/</span>Carousel
             </h2>
           </div>
           <div className="section-center">

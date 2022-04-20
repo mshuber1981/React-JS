@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 // Data
 import { reviews } from "../data";
@@ -71,8 +71,8 @@ const StyledSlider = styled.main`
         height: 150px;
         object-fit: cover;
         border: 2px solid
-          ${(props) =>
-            props.theme.name === "light"
+          ${({ theme }) =>
+            theme.name === "light"
               ? "var(--clr-grey-1)"
               : "var(--clr-grey-10)"};
       }
@@ -107,14 +107,10 @@ const StyledSlider = styled.main`
       position: absolute;
       top: 200px;
       transform: translateY(-50%);
-      background: ${(props) =>
-        props.theme.name === "light"
-          ? "var(--clr-grey-1)"
-          : "var(--clr-grey-9)"};
-      color: ${(props) =>
-        props.theme.name === "light"
-          ? "var(--clr-grey-10)"
-          : "var(--clr-grey-1)"};
+      background: ${({ theme }) =>
+        theme.name === "light" ? "var(--clr-grey-1)" : "var(--clr-grey-9)"};
+      color: ${({ theme }) =>
+        theme.name === "light" ? "var(--clr-grey-10)" : "var(--clr-grey-1)"};
       width: 1.25rem;
       height: 1.25rem;
       display: grid;
@@ -154,7 +150,7 @@ const StyledSlider = styled.main`
 `;
 
 export default function Slider() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = React.useState(0);
 
   function nextSlide() {
     setIndex(function (oldIndex) {
@@ -176,7 +172,7 @@ export default function Slider() {
     });
   }
 
-  useEffect(
+  React.useEffect(
     function () {
       let slider = setInterval(function () {
         setIndex(function (oldIndex) {

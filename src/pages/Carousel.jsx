@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { reviews } from "../data";
 // Icons
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaQuoteRight } from "react-icons/fa";
 // Components
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -93,12 +92,6 @@ const StyledSlider = styled.main`
         margin: 0 auto;
         margin-top: 2rem;
         line-height: 2;
-      }
-
-      .icon {
-        font-size: 3rem;
-        margin-top: 1rem;
-        color: var(--clr-primary-5);
       }
     }
 
@@ -220,7 +213,6 @@ export default function Slider() {
                   <h4>{name}</h4>
                   <p className="title">{job}</p>
                   <p className="text">{text}</p>
-                  <FaQuoteRight className="icon" />
                 </article>
               );
             })}

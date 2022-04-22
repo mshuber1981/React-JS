@@ -69,7 +69,7 @@ export const projects = [
     image: Carousel,
     link: "/Carousel",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
+      "A more complex carousel mapping multiple elements with automatic cycling via useEffect, and a transform animation while moving between elements.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Carousel.jsx",
   },
@@ -79,7 +79,7 @@ export const projects = [
     image: Tours,
     link: "/Tours",
     description:
-      "Project number two. Similar to the Birthday Reminders project, but including a slightly more complex data fetching example.",
+      "Similar to the Birthday Reminders project, but including a more complex data fetching example and state management via Redux.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
   },

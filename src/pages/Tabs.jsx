@@ -100,6 +100,7 @@ const StyledTabs = styled.main`
       width: 90vw;
       display: grid;
       grid-template-columns: 200px 1fr;
+      grid-template-rows: minmax(20rem, 20rem);
       column-gap: 4rem;
 
       .btn-container {

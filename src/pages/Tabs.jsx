@@ -162,9 +162,7 @@ export default function Tabs() {
         </main>
       </>
     );
-  }
-
-  if (error) {
+  } else if (error) {
     return (
       <>
         <NavBar />
@@ -175,52 +173,52 @@ export default function Tabs() {
         </StyledTabs>
       </>
     );
-  }
+  } else {
+    const { company, dates, duties, title } = jobs[value];
 
-  const { company, dates, duties, title } = jobs[value];
-
-  return (
-    <>
-      <NavBar />
-      <SideBar />
-      <StyledTabs>
-        <Title>
-          <h2>Tabs</h2>
-          <div className="underline"></div>
-        </Title>
-        <section className="section">
-          <div className="jobs-center">
-            {/* btn container */}
-            <div className="btn-container">
-              {jobs.map((item, index) => {
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setValue(index)}
-                    className={`job-btn ${index === value && "active-btn"}`}
-                  >
-                    {item.company}
-                  </button>
-                );
-              })}
+    return (
+      <>
+        <NavBar />
+        <SideBar />
+        <StyledTabs>
+          <Title>
+            <h2>Tabs</h2>
+            <div className="underline"></div>
+          </Title>
+          <section className="section">
+            <div className="jobs-center">
+              {/* btn container */}
+              <div className="btn-container">
+                {jobs.map((item, index) => {
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setValue(index)}
+                      className={`job-btn ${index === value && "active-btn"}`}
+                    >
+                      {item.company}
+                    </button>
+                  );
+                })}
+              </div>
+              {/* job info */}
+              <article className="job-info">
+                <h3>{title}</h3>
+                <h4>{company}</h4>
+                <p className="job-date">{dates}</p>
+                {duties.map((duty, index) => {
+                  return (
+                    <div key={index} className="job-desc">
+                      <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                      <p>{duty}</p>
+                    </div>
+                  );
+                })}
+              </article>
             </div>
-            {/* job info */}
-            <article className="job-info">
-              <h3>{title}</h3>
-              <h4>{company}</h4>
-              <p className="job-date">{dates}</p>
-              {duties.map((duty, index) => {
-                return (
-                  <div key={index} className="job-desc">
-                    <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-                    <p>{duty}</p>
-                  </div>
-                );
-              })}
-            </article>
-          </div>
-        </section>
-      </StyledTabs>
-    </>
-  );
+          </section>
+        </StyledTabs>
+      </>
+    );
+  }
 }

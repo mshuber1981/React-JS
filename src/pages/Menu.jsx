@@ -18,7 +18,6 @@ export default function Menu() {
       setMenuItems(items);
       return;
     }
-
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
   }

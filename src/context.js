@@ -35,7 +35,6 @@ const AppProvider = function ({ children }) {
           const newCocktails = drinks.map(function (item) {
             const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
               item;
-
             return {
               id: idDrink,
               name: strDrink,

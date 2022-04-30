@@ -1,11 +1,18 @@
-import { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectCount,
+  setCount,
+  selectTexData,
+  setTextData,
+} from "../components/LoremIpsum/loremSlice";
 import styled from "styled-components";
 // Data
 import { text } from "../data";
 // Components
+import { InnerButton, Title } from "../components/styledComponents";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import { InnerButton, Title } from "../components/styledComponents";
 
 const StyledLoremIpsum = styled.main`
   .lorem-form {
@@ -37,18 +44,17 @@ const StyledLoremIpsum = styled.main`
 `;
 
 export default function LoremIpsum() {
-  const [count, setCount] = useState(0);
-  const [textData, setText] = useState([]);
+  const count = useSelector(selectCount);
+  const textData = useSelector(selectTexData);
+  const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
-    let amount = parseInt(count);
     if (count <= 0) {
-      amount = 1;
-      setCount(amount);
+      dispatch(setCount(1));
     }
-    setText(text.slice(0, amount));
-  };
+    dispatch(setTextData(text.slice(0, count)));
+  }
 
   return (
     <>
@@ -68,7 +74,7 @@ export default function LoremIpsum() {
               name="amount"
               id="amount"
               value={count}
-              onChange={(e) => setCount(e.target.value)}
+              onChange={(e) => dispatch(setCount(e.target.value))}
             />
             <InnerButton type="submit">Generate</InnerButton>
           </form>

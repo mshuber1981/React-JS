@@ -11,10 +11,10 @@ import BirthdayReminder from "./media/cards/BirthdayReminder.PNG";
 import Accordian from "./media/cards/Accordian.PNG";
 import Reviews from "./media/cards/Reviews.PNG";
 import Carousel from "./media/cards/Carousel.PNG";
+import Lorem from "./media/cards/Lorem.PNG";
 import Tours from "./media/cards/Tours.PNG";
 import Menu from "./media/cards/Menu.PNG";
 import Tabs from "./media/cards/Tabs.PNG";
-import Lorem from "./media/cards/Lorem.PNG";
 import Colors from "./media/cards/Colors.PNG";
 import ToDo from "./media/cards/ToDo.PNG";
 import Stripe from "./media/cards/Stripe.PNG";
@@ -75,6 +75,16 @@ export const projects = [
   },
   {
     id: 5,
+    name: "Lorem Ipsum",
+    image: Lorem,
+    link: "/Lorem-Ipsum",
+    description:
+      "My first project using the Redux Toolkit to manage state. I am using an array of strings to generate up to 8 paragraphs of lorem ipsum like text.",
+    github:
+      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/LoremIpsum.jsx",
+  },
+  {
+    id: 6,
     name: "Tours",
     image: Tours,
     link: "/Tours",
@@ -84,7 +94,7 @@ export const projects = [
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/ToursPage.jsx",
   },
   {
-    id: 6,
+    id: 7,
     name: "Menu",
     image: Menu,
     link: "/Menu",
@@ -94,7 +104,7 @@ export const projects = [
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Menu.jsx",
   },
   {
-    id: 7,
+    id: 8,
     name: "Tabs",
     image: Tabs,
     link: "/Tabs",
@@ -102,16 +112,6 @@ export const projects = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
     github:
       "https://github.com/mshuber1981/React-JS/blob/main/src/pages/Tabs.jsx",
-  },
-  {
-    id: 8,
-    name: "Lorem Ipsum",
-    image: Lorem,
-    link: "/Lorem-Ipsum",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magni.",
-    github:
-      "https://github.com/mshuber1981/React-JS/blob/main/src/pages/LoremIpsum.jsx",
   },
   {
     id: 9,

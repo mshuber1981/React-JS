@@ -12,6 +12,7 @@ const AppContext = createContext();
 
 const AppProvider = function ({ children }) {
   const [theme, setTheme] = useState("light");
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   // Cocktails
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("a");
@@ -21,6 +22,10 @@ const AppProvider = function ({ children }) {
     setTheme((prevState) =>
       prevState === "light" ? setTheme("dark") : setTheme("light")
     );
+
+  const openSideBar = () => setIsSideBarOpen((prevState) => !prevState);
+
+  const closeSideBar = () => setIsSideBarOpen(false);
 
   // Cocktails
   const fetchDrinks = useCallback(
@@ -64,8 +69,11 @@ const AppProvider = function ({ children }) {
     <AppContext.Provider
       value={{
         theme,
-        toggleTheme,
         setTheme,
+        toggleTheme,
+        isSideBarOpen,
+        openSideBar,
+        closeSideBar,
         loading,
         cocktails,
         searchTerm,

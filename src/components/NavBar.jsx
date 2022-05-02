@@ -1,5 +1,4 @@
-import { useDispatch } from "react-redux";
-import { openSideBar } from "../appSlice";
+import { useGlobalContext } from "../context";
 import styled from "styled-components";
 // Icons
 import { FaReact, FaBars } from "react-icons/fa";
@@ -64,7 +63,7 @@ const StyledNavBar = styled.nav`
 `;
 
 export default function NavBar() {
-  const dispatch = useDispatch();
+  const { openSideBar } = useGlobalContext();
 
   return (
     <>
@@ -76,7 +75,7 @@ export default function NavBar() {
             <button
               type="button"
               className="nav-btn"
-              onClick={() => dispatch(openSideBar())}
+              onClick={() => openSideBar()}
             >
               <FaBars />
             </button>

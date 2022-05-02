@@ -1,7 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import { useSelector, useDispatch } from "react-redux";
-import { closeSideBar, selectIsSideBarOpen } from "./appSlice";
+import { useDispatch } from "react-redux";
 import { fetchTours } from "./components/Tours/toursSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -42,9 +41,8 @@ const themes = {
 };
 
 export default function App() {
+  const { closeSideBar, isSideBarOpen, theme, setTheme } = useGlobalContext();
   const dispatch = useDispatch();
-  const isSideBarOpen = useSelector(selectIsSideBarOpen);
-  const { theme, setTheme } = useGlobalContext();
 
   React.useEffect(
     () => (darkMode ? setTheme("dark") : setTheme("light")),
@@ -54,13 +52,13 @@ export default function App() {
   React.useEffect(
     function () {
       const main = document.querySelector("main");
-      const close = () => dispatch(closeSideBar());
+      const close = () => closeSideBar();
 
       if (isSideBarOpen) main.addEventListener("click", close);
 
       return () => main.removeEventListener("click", close);
     },
-    [isSideBarOpen, dispatch]
+    [isSideBarOpen, closeSideBar]
   );
   // Tours data
   React.useEffect(() => dispatch(fetchTours()), [dispatch]);
